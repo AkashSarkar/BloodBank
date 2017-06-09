@@ -27454,3 +27454,9 @@ ion-navbar.toolbar {
     padding-top: calc(16px + 20px);
   }
 }
+
+.btnsearch {
+  position: relative;
+  margin-left: 25%;
+  margin-top: 50%;
+}
