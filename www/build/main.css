@@ -27455,9 +27455,8 @@ ion-navbar.toolbar {
   }
 }
 
-page-home .btnsearch {
-  position: relative;
-  margin-left: 25%;
+.btnHome {
+  text-align: center !important;
   margin-top: 50%;
 }
 
