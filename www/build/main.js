@@ -55806,16 +55806,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
+        this.splash = true;
+        this.tabBarElement = document.querySelector('.tabbar');
     }
+    HomePage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.tabBarElement.style.display = 'none';
+        setTimeout(function () {
+            _this.splash = false;
+            _this.tabBarElement.style.display = 'flex';
+        }, 4000);
+    };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list no-line>\n      <ion-item>\n        <button ion-button round large >Search Blood</button>\n      </ion-item>\n      <ion-item>\n         <button ion-button color="secondary" round large >Donate blood</button>\n         <p>kklkllkllkl</p>\n      </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/home/home.html"*/'<!--splash screen code-->\n\n<div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n  <div class="flb">\n    <div class="Aligner-item Aligner-item--top"></div>\n    <img src="assets/logo.jpg">\n    <div class="Aligner-item Aligner-item--bottom"></div>\n  </div>\n</div>\n<!--splash screen end-->\n\n\n\n<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list no-line>\n      <ion-item>\n    \n <button ion-button round large >Search Blood</button>\n      </ion-item>\n      <ion-item>\n      \n          \n         <button ion-button color="secondary" round large >Donate blood</button>\n        \n      </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
 ], HomePage);
 
+var _a;
 //# sourceMappingURL=home.js.map
 
 /***/ }),

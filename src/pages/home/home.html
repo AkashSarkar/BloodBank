@@ -1,3 +1,16 @@
+<!--splash screen code-->
+
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/logo.jpg">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+<!--splash screen end-->
+
+
+
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
@@ -7,11 +20,14 @@
 <ion-content padding>
     <ion-list no-line>
       <ion-item>
-        <button ion-button round large >Search Blood</button>
+    
+ <button ion-button round large >Search Blood</button>
       </ion-item>
       <ion-item>
+      
+          
          <button ion-button color="secondary" round large >Donate blood</button>
-         <p>Ekhane ami edit korlam so ekhn ekta conflict hobe</p>
+        
       </ion-item>
     </ion-list>
 </ion-content>
