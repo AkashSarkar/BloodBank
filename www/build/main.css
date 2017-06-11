@@ -27455,7 +27455,7 @@ ion-navbar.toolbar {
   }
 }
 
-.btnsearch {
+page-home .btnsearch {
   position: relative;
   margin-left: 25%;
   margin-top: 50%;
@@ -27469,7 +27469,7 @@ ion-navbar.toolbar {
   left: 0;
   z-index: 100000;
   width: 100%;
-  background-color: #500000;
+  background-color: #240000;
 }
 
 .flb {
