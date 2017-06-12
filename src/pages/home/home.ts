@@ -23,7 +23,7 @@ this.tabBarElement.style.display='none';
   this.tabBarElement.style.display='flex';
 
 
-  },4000);
+  },3500);
   }
 
 }
