@@ -27461,6 +27461,7 @@ page-home .btnsearch {
   margin-top: 50%;
 }
 
+/* splash screen*/
 #custom-overlay {
   position: fixed;
   top: 0;
@@ -27534,6 +27535,7 @@ page-home .btnsearch {
   }
 }
 
+/* animation logo from bounce.js*/
 .animation-target {
   -webkit-animation: animation 1000ms linear both;
   animation: animation 1000ms linear both;
@@ -27753,3 +27755,6 @@ page-home .btnsearch {
     transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   }
 }
+
+/* end animation logo */
+/*end  splash screen*/

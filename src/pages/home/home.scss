@@ -8,6 +8,11 @@ page-home {
 
 
 
+
+
+
+                                        /* splash screen*/
+
 #custom-overlay {
   position: fixed;
   top: 0;
@@ -62,6 +67,7 @@ page-home {
 
 
 
+                                             /* animation logo from bounce.js*/
 
 .animation-target {
   -webkit-animation: animation 1000ms linear both;
@@ -127,4 +133,11 @@ page-home {
   90.69% { -webkit-transform: matrix3d(1.999, 0, 0, 0, 0, 1.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.999, 0, 0, 0, 0, 1.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   100% { -webkit-transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
 }
+                                                        /* end animation logo */
 
+
+
+
+                                                       /*end  splash screen*/
+
+                                                       
