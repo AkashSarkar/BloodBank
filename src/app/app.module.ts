@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SearchBloodPage } from '../pages/search-blood/search-blood';
+import { DataServicesProvider } from '../providers/data-services/data-services';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SearchBloodPage } from '../pages/search-blood/search-blood';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataServicesProvider
   ]
 })
 export class AppModule {}
