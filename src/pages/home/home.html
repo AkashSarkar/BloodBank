@@ -3,7 +3,7 @@
 <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
   <div class="flb">
     <div class="Aligner-item Aligner-item--top"></div>
-    <img src="assets/logo1.png">
+     <img src="assets/logo1.png">
     <div class="Aligner-item Aligner-item--bottom"></div>
   </div>
 </div>
@@ -17,15 +17,13 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-list no-lines>
-      <ion-item>
-    
- <button ion-button round large >Search Blood</button>
+<ion-content >
+    <ion-list no-lines >
+      <ion-item class="btnSearch">
+        <button   ion-button round large (click)="sBlood()">Search Blood</button>
       </ion-item>
-      <ion-item>
-      
-          
+     
+      <ion-item class="btnDonate"> 
          <button ion-button color="secondary" round large >Donate blood</button>
       </ion-item>
     </ion-list>
