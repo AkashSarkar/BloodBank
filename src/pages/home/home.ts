@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SearchBloodPage } from '../search-blood/search-blood';
 
 @Component({
   selector: 'page-home',
@@ -7,23 +8,26 @@ import { NavController } from 'ionic-angular';
   
 })
 export class HomePage {
-splash=true;
-tabBarElement:any;
+
+
+  splash=true;
+  tabBarElement:any;
 
   constructor(public navCtrl: NavController) {
+    this.tabBarElement=document.querySelector('.tabbar');
+}
 
-  this.tabBarElement=document.querySelector('.tabbar');
-
+  sBlood(){
+    this.navCtrl.push(SearchBloodPage);
   }
+
   ionViewDidLoad(){
-this.tabBarElement.style.display='none';
+    this.tabBarElement.style.display='none';
 
-  setTimeout(()=>{
-  this.splash=false;
-  this.tabBarElement.style.display='flex';
-
-
-  },3500);
+    setTimeout(()=>{
+      this.splash=false;
+      this.tabBarElement.style.display='flex';
+    },3500);
   }
 
 }

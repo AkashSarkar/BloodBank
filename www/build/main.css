@@ -27455,9 +27455,13 @@ ion-navbar.toolbar {
   }
 }
 
-.btnHome {
+page-home .btnSearch {
   text-align: center !important;
-  margin-top: 50%;
+  margin-top: 40%;
+}
+
+page-home .btnDonate {
+  text-align: center !important;
 }
 
 #custom-overlay {
