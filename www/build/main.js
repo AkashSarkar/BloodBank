@@ -55779,6 +55779,54 @@ exports.isFunction = isFunction;
 
 /***/ }),
 /* 98 */
+<<<<<<< HEAD
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchBloodPage; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the SearchBloodPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var SearchBloodPage = (function () {
+    function SearchBloodPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    SearchBloodPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SearchBloodPage');
+    };
+    return SearchBloodPage;
+}());
+SearchBloodPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-search-blood',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/search-blood/search-blood.html"*/'<!--\n  Generated template for the SearchBloodPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>SearchBlood</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/search-blood/search-blood.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], SearchBloodPage);
+
+//# sourceMappingURL=search-blood.js.map
+
+/***/ }),
+/* 99 */
+>>>>>>> de3cac720fdaf450a4cca8a341a48b282bd5d029
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -55817,7 +55865,11 @@ var AboutPage = (function () {
 }());
 AboutPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+<<<<<<< HEAD
         selector: 'page-about',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/about/about.html"*/
+=======
+        selector: 'page-about',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/about/about.html"*/'<ion-header>\n  \n  <ion-navbar color="danger">\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/about/about.html"*/
+>>>>>>> de3cac720fdaf450a4cca8a341a48b282bd5d029
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], AboutPage);
@@ -55851,7 +55903,11 @@ var ContactPage = (function () {
 }());
 ContactPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+<<<<<<< HEAD
         selector: 'page-contact',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-left></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/contact/contact.html"*/
+=======
+        selector: 'page-contact',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/contact/contact.html"*/'<ion-header>\n  \n  <ion-navbar color="danger">\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-left></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/contact/contact.html"*/
+>>>>>>> de3cac720fdaf450a4cca8a341a48b282bd5d029
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], ContactPage);
@@ -55900,7 +55956,11 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+<<<<<<< HEAD
         selector: 'page-home',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/home/home.html"*/'<!--splash screen code-->\n\n<div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n  <div class="flb">\n    <div class="Aligner-item Aligner-item--top"></div>\n     <img src="assets/logo1.png">\n    <div class="Aligner-item Aligner-item--bottom"></div>\n  </div>\n</div>\n<!--splash screen end-->\n\n\n\n<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content >\n    <ion-list no-lines >\n      <ion-item class="btnSearch">\n        <button   ion-button round large (click)="sBlood()">Search Blood</button>\n      </ion-item>\n     \n      <ion-item class="btnDonate"> \n         <button ion-button color="secondary" round large >Donate blood</button>\n      </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/home/home.html"*/,
+=======
+        selector: 'page-home',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/home/home.html"*/'<!--splash screen code-->\n\n<div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n  <div class="flb">\n    <div class="Aligner-item Aligner-item--top"></div>\n     <img src="assets/logo1.png">\n    <div class="Aligner-item Aligner-item--bottom"></div>\n  </div>\n</div>\n<!--splash screen end-->\n\n\n\n<ion-header>\n  <ion-navbar color="danger">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content >\n    <ion-list no-lines >\n      <ion-item class="btnSearch">\n        <button   ion-button round large (click)="sBlood()">Search Blood</button>\n      </ion-item>\n     \n      <ion-item class="btnDonate"> \n         <button ion-button color="secondary" round large >Donate blood</button>\n      </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/BloodBank/BloodBank/src/pages/home/home.html"*/,
+>>>>>>> de3cac720fdaf450a4cca8a341a48b282bd5d029
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], HomePage);
