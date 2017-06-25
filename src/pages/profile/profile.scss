@@ -1,0 +1,44 @@
+//deepita start
+
+
+ion-content{
+    background-image: url('../../img/back.jpg');
+     
+}
+
+.card ion-avatar img
+{
+    margin-left: 25%;
+    width: 50%;
+    height: 50%;
+   
+    
+}
+.ava
+{
+    background-color: rgba(160, 3, 3, 0.7);
+    color: white;
+    font-size: 20px;
+
+}
+.ava p
+{
+    color: yellowgreen;
+    font-size: 18px;
+}
+
+.listColor ion-item
+{
+    background-color:rgba(255, 255, 255, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.listColor ion-item:hover
+{
+    background-color:rgba(255, 255, 255, 0);
+    color: yellow;
+    font-size: 22px;
+}
+
+//deepita end.
