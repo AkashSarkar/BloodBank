@@ -26,13 +26,12 @@ $font-path: "../assets/fonts";
 $colors: (
   primary:    #488aff,
   secondary:  #32db64,
-  danger:     #f53d3d,
+  danger:     #DC0909,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #000000
 );
 
-
-// App iOS Variables
+/// App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
@@ -62,7 +61,6 @@ $colors: (
 
 @import "ionic.theme.default";
 
-
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
@@ -76,3 +74,5 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
