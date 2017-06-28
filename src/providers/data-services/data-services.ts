@@ -8,12 +8,14 @@ export class DataServicesProvider {
     constructor(private http:Http) {
       
     }
+    
     load(){
       
       return this.http.get('https://www.uiubloodbank.ml/API/api.php')
       .map(res =>res.json());
-      
-      
+    
     }
+
+    
 
 }

@@ -9,8 +9,7 @@ import { DataServicesProvider } from '../../providers/data-services/data-service
 export class AboutPage {
   items:any;
   constructor(public navCtrl: NavController,private Data:DataServicesProvider) {
-    this.Data.load().subscribe(data=>{
-      console.log(data);
+    this.Data.load().subscribe(data =>{
       this.items=data;
     });
   }

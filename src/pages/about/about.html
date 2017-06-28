@@ -8,9 +8,16 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-     <ion-item *ngFor="let item of items">
-        <h2>{{ item.name }} {{item.blood_type}}</h2>
-   </ion-item>
-  </ion-list>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Blood Type</th> 
+      <th>Age</th>
+    </tr>
+    <tr *ngFor="let item of items">
+      <td>{{ item.name }}</td>
+      <td>{{ item.blood_type }}</td>
+    </tr>
+    
+  </table>
 </ion-content>

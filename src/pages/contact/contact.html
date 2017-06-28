@@ -2,17 +2,29 @@
   
   <ion-navbar color="danger">
     <ion-title>
-      Contact
+      Available Donor
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content 
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+      </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
+    <ion-item *ngFor="let item of items">
+      <ion-avatar item-start>
+         {{ item.blood_type }}
+      </ion-avatar>
+      <h2>{{ item.name }}</h2>
+      <h3>AGE: {{item.age}}</h3>
+      <h4>PHONE: {{item.phone}}</h4>
+      <p>LOCATION: {{item.address}}</p>
     </ion-item>
   </ion-list>
 </ion-content>
