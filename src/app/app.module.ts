@@ -16,6 +16,7 @@ import {FeedPage} from '../pages/feed/feed';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SearchBloodPage } from '../pages/search-blood/search-blood';
+import { HttpModule } from '@angular/http';
 import { DataServicesProvider } from '../providers/data-services/data-services';
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { DataServicesProvider } from '../providers/data-services/data-services';
   ],
   imports: [
     BrowserModule,
-  
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

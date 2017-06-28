@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SearchBloodPage } from '../search-blood/search-blood';
+//import { DataServicesProvider } from '../../providers/data-services/data-services';
 
 @Component({
   selector: 'page-home',

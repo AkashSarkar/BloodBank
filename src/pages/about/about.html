@@ -8,5 +8,9 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-list>
+     <ion-item *ngFor="let item of items">
+        <h2>{{ item.name }} {{item.blood_type}}</h2>
+   </ion-item>
+  </ion-list>
 </ion-content>
