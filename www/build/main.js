@@ -44867,14 +44867,17 @@ var DataServicesProvider = (function () {
         return this.http.get('https://www.uiubloodbank.ml/API/search.php')
             .map(function (res) { return res.json(); });
     };
+    DataServicesProvider.prototype.hospitals = function () {
+        return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
+            .map(function (res) { return res.json(); });
+    };
     return DataServicesProvider;
 }());
 DataServicesProvider = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
 ], DataServicesProvider);
 
-var _a;
 //# sourceMappingURL=data-services.js.map
 
 /***/ }),
@@ -55859,7 +55862,7 @@ var FeedPage = (function () {
 FeedPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-feed',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/feed/feed.html"*/'\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>Help & Feed BacK</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/feed/feed.html"*/,
+        selector: 'page-feed',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/feed/feed.html"*/'\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>Help & Feed BacK</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/feed/feed.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], FeedPage);
@@ -55904,7 +55907,7 @@ var ForumPage = (function () {
 ForumPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-forum',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/forum/forum.html"*/'\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>Forum</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/forum/forum.html"*/,
+        selector: 'page-forum',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/forum/forum.html"*/'\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>Forum</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/forum/forum.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ForumPage);
@@ -55949,7 +55952,7 @@ var ManageAccountPage = (function () {
 ManageAccountPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-manage-account',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/manage-account/manage-account.html"*/'\n<ion-header>\n\n  <ion-navbar color = "danger">\n    <ion-title>Manage Account</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/manage-account/manage-account.html"*/,
+        selector: 'page-manage-account',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/manage-account/manage-account.html"*/'\n<ion-header>\n\n  <ion-navbar color = "danger">\n    <ion-title>Manage Account</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/manage-account/manage-account.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ManageAccountPage);
@@ -55994,7 +55997,7 @@ var NotificationPage = (function () {
 NotificationPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-notification',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/notification/notification.html"*/'<ion-header>\n  <ion-navbar color="danger">\n    <ion-title>\n     Notification\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n \n</ion-content>'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/notification/notification.html"*/,
+        selector: 'page-notification',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/notification/notification.html"*/'<ion-header>\n  <ion-navbar color="danger">\n    <ion-title>\n     Notification\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n \n</ion-content>'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/notification/notification.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], NotificationPage);
@@ -56053,7 +56056,7 @@ var ProfilePage = (function () {
 ProfilePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar color="danger">\n    <ion-title>\n      Profile\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card">\n  \n   \n      \n       <ion-item class="ava" no-lines>\n          <ion-avatar>\n             <img src="assets/deepita.jpg">\n          </ion-avatar>\n       \n                <h2>Deepita Saha</h2>\n                <p>Last Date of donation : 28/8/16 .</p>\n          \n            \n        </ion-item>\n\n        <div class="ion-list-inset" no-lines>\n   \n              <div class="item item-icon-right" class="listColor" no-lines>\n                <ion-item  no-lines (click)="_notification()">\n                   <ion-icon name="notifications" item-left></ion-icon>\n                   <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Notification\n                </ion-item>\n                <ion-item no-lines (click)="_forum()">\n                   <ion-icon name="logo-buffer" item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Forum\n                </ion-item>\n                \n                <ion-item no-lines (click)="_manage()">\n                <ion-icon name="settings"  item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright"item-right></ion-icon>\n                   Manage Account\n                </ion-item>\n                <ion-item no-lines (click)="_hFeedBack()">\n                    <ion-icon name="help-circle"  item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Help & Feedback\n                </ion-item>\n                <ion-item no-lines>\n                  <ion-icon name="log-out" item-left></ion-icon>\n\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Log Out\n                </ion-item>\n                  \n               </div>\n        </div> \n            \n\n  \n  \n</ion-content>\n\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/profile/profile.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar color="danger">\n    <ion-title>\n      Profile\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card">\n  \n   \n      \n       <ion-item class="ava" no-lines>\n          <ion-avatar>\n             <img src="assets/deepita.jpg">\n          </ion-avatar>\n       \n                <h2>Deepita Saha</h2>\n                <p>Last Date of donation : 28/8/16 .</p>\n          \n            \n        </ion-item>\n\n        <div class="ion-list-inset" no-lines>\n   \n              <div class="item item-icon-right" class="listColor" no-lines>\n                <ion-item  no-lines (click)="_notification()">\n                   <ion-icon name="notifications" item-left></ion-icon>\n                   <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Notification\n                </ion-item>\n                <ion-item no-lines (click)="_forum()">\n                   <ion-icon name="logo-buffer" item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Forum\n                </ion-item>\n                \n                <ion-item no-lines (click)="_manage()">\n                <ion-icon name="settings"  item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright"item-right></ion-icon>\n                   Manage Account\n                </ion-item>\n                <ion-item no-lines (click)="_hFeedBack()">\n                    <ion-icon name="help-circle"  item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Help & Feedback\n                </ion-item>\n                <ion-item no-lines>\n                  <ion-icon name="log-out" item-left></ion-icon>\n\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Log Out\n                </ion-item>\n                  \n               </div>\n        </div> \n            \n\n  \n  \n</ion-content>\n\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/profile/profile.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ProfilePage);
@@ -56116,12 +56119,11 @@ var SearchBloodPage = (function () {
 SearchBloodPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-search-blood',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/search-blood/search-blood.html"*/'\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>SearchBlood</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <ion-list>\n    <ion-item *ngFor="let item of items">\n      {{ item }}\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/search-blood/search-blood.html"*/,
+        selector: 'page-search-blood',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/search-blood/search-blood.html"*/'\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>SearchBlood</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <ion-list>\n    <ion-item *ngFor="let item of items">\n      {{ item }}\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/search-blood/search-blood.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], SearchBloodPage);
 
-var _a, _b;
 //# sourceMappingURL=search-blood.js.map
 
 /***/ }),
@@ -56171,7 +56173,7 @@ var AboutPage = (function () {
 }());
 AboutPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-about',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/about/about.html"*/'<ion-header>\n  \n  <ion-navbar color="danger">\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <table>\n    <tr>\n      <th>Name</th>\n      <th>Blood Type</th> \n      <th>Age</th>\n    </tr>\n    <tr *ngFor="let item of items">\n      <td>{{ item.name }}</td>\n      <td>{{ item.blood_type }}</td>\n    </tr>\n    \n  </table>\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/about/about.html"*/
+        selector: 'page-about',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/about/about.html"*/'<ion-header>\n  \n  <ion-navbar color="danger">\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <table>\n    <tr>\n      <th>Name</th>\n      <th>Blood Type</th> \n      <th>Age</th>\n    </tr>\n    <tr *ngFor="let item of items">\n      <td>{{ item.name }}</td>\n      <td>{{ item.blood_type }}</td>\n    </tr>\n    \n  </table>\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/about/about.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_data_services_data_services__["a" /* DataServicesProvider */]])
 ], AboutPage);
@@ -56224,7 +56226,7 @@ var ContactPage = (function () {
 }());
 ContactPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-contact',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/contact/contact.html"*/'<ion-header>\n  \n  <ion-navbar color="danger">\n    <ion-title>\n      Available Donor\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-lines class="card">\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content no-lines\n      pullingIcon="arrow-dropdown"\n      pullingText="Pull to refresh"\n      refreshingSpinner="circles"\n      refreshingText="Refreshing...">\n      </ion-refresher-content>\n  </ion-refresher>\n  <ion-list >\n    <ion-item *ngFor="let item of items"  class="Dlist">\n     \n      <ion-avatar item-start>\n       \n        {{ item.blood_type }}\n    </ion-avatar>\n      <h2>{{ item.name }}</h2>\n      <h3>AGE: {{item.age}}</h3>\n     <a href="tel:{{item.phone}}" item-end > <ion-icon  name="call" class="cIcon"></ion-icon></a>\n      <p>LOCATION: {{item.address}}</p>\n    </ion-item>\n    \n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/contact/contact.html"*/
+        selector: 'page-contact',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/contact/contact.html"*/'<ion-header>\n  \n  <ion-navbar color="danger">\n    <ion-title>\n      Available Donor\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-lines class="card">\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content no-lines\n      pullingIcon="arrow-dropdown"\n      pullingText="Pull to refresh"\n      refreshingSpinner="circles"\n      refreshingText="Refreshing...">\n      </ion-refresher-content>\n  </ion-refresher>\n  <ion-list >\n    <ion-item *ngFor="let item of items"  class="Dlist">\n     \n      <ion-avatar item-start>\n       \n        {{ item.blood_type }}\n    </ion-avatar>\n      <h2>{{ item.name }}</h2>\n      <h3>AGE: {{item.age}}</h3>\n     <a href="tel:{{item.phone}}" item-end > <ion-icon  name="call" class="cIcon"></ion-icon></a>\n      <p>LOCATION: {{item.address}}</p>\n    </ion-item>\n    \n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/contact/contact.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_data_services_data_services__["a" /* DataServicesProvider */]])
 ], ContactPage);
@@ -56239,6 +56241,7 @@ ContactPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search_blood_search_blood__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_data_services_data_services__ = __webpack_require__(47);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56252,11 +56255,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-//import { DataServicesProvider } from '../../providers/data-services/data-services';
+
 var HomePage = (function () {
-    function HomePage(navCtrl) {
+    function HomePage(navCtrl, Data) {
+        var _this = this;
         this.navCtrl = navCtrl;
+        this.Data = Data;
         this.splash = true;
+        this.Data.hospitals().subscribe(function (data) {
+            _this.hospital = data;
+        });
         this.tabBarElement = document.querySelector('.tabbar');
     }
     HomePage.prototype.sBlood = function () {
@@ -56274,11 +56282,12 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/home/home.html"*/'<!--splash screen code-->\n\n<div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n  <div class="flb">\n    <div class="Aligner-item Aligner-item--top"></div>\n     <img src="assets/logo1.png">\n    <div class="Aligner-item Aligner-item--bottom"></div>\n  </div>\n</div>\n<!--splash screen end-->\n\n\n  \n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-item class="bsearch" no-lines>\n       <ion-title>Home</ion-title>\n       <ion-icon name="search" item-end (click)="sBlood()"></ion-icon> \n     </ion-item>\n    \n  </ion-navbar>\n  \n</ion-header>\n    \n<ion-content class="card-background-page" >\n    \n     \n     \n\n  <ion-card>\n    <img src="assets/deepita.jpg"/>\n    <div class="card-title">São Paulo</div>\n    <div class="card-subtitle">41 Listings</div>\n  </ion-card>\n\n  <ion-card>\n    <img src="img/card-amsterdam.png"/>\n    <div class="card-title">Amsterdam</div>\n    <div class="card-subtitle">64 Listings</div>\n  </ion-card>\n\n  <ion-card>\n    <img src="img/card-sf.png"/>\n    <div class="card-title">San Francisco</div>\n    <div class="card-subtitle">72 Listings</div>\n  </ion-card>\n\n  <ion-card>\n    <img src="img/card-madison.png"/>\n    <div class="card-title">Madison</div>\n    <div class="card-subtitle">28 Listings</div>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/home/home.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/home/home.html"*/'<!--splash screen code-->\n\n<div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n  <div class="flb">\n    <div class="Aligner-item Aligner-item--top"></div>\n     <img src="assets/logo1.png">\n    <div class="Aligner-item Aligner-item--bottom"></div>\n  </div>\n</div>\n<!--splash screen end-->\n\n\n  \n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-item class="bsearch" no-lines>\n       <ion-title>Home</ion-title>\n       <ion-icon name="search" item-end (click)="sBlood()"></ion-icon> \n     </ion-item>\n    \n  </ion-navbar>\n  \n</ion-header>\n    \n<ion-content >\n  <ion-list >\n    <ion-item class="home-card"  *ngFor="let item of hospital">\n      <ion-card >\n        <img src="{{item.images}}"/>\n        <ion-card-content>\n            <ion-card-title>{{item.name}}</ion-card-title>\n            <ion-card-title>{{item.address}}</ion-card-title>\n        </ion-card-content>\n      </ion-card>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/home/home.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__providers_data_services_data_services__["a" /* DataServicesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_data_services_data_services__["a" /* DataServicesProvider */]) === "function" && _b || Object])
 ], HomePage);
 
+var _a, _b;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -56316,7 +56325,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/tabs/tabs.html"*/'<ion-tabs color="dark" >\n  <ion-tab  color ="danger"[root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Donor" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Profile" tabIcon="contact" tabBadge="1"></ion-tab>\n  <ion-tab [root]="tab4Root"tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n</ion-tabs>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/tabs/tabs.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/tabs/tabs.html"*/'<ion-tabs color="dark" >\n  <ion-tab  color ="danger"[root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Donor" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Profile" tabIcon="contact" tabBadge="1"></ion-tab>\n  <ion-tab [root]="tab4Root"tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n</ion-tabs>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/tabs/tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -77540,7 +77549,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/app/app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);

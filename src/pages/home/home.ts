@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SearchBloodPage } from '../search-blood/search-blood';
-//import { DataServicesProvider } from '../../providers/data-services/data-services';
+import { DataServicesProvider } from '../../providers/data-services/data-services';
 
 @Component({
   selector: 'page-home',
@@ -9,14 +9,16 @@ import { SearchBloodPage } from '../search-blood/search-blood';
   
 })
 export class HomePage {
-
-
   splash=true;
   tabBarElement:any;
-
-  constructor(public navCtrl: NavController) {
+  hospital:any;
+  
+  constructor(public navCtrl: NavController,private Data:DataServicesProvider) {
+     this.Data.hospitals().subscribe(data =>{
+      this.hospital=data;
+    });
     this.tabBarElement=document.querySelector('.tabbar');
-}
+  }
 
   sBlood() {
     this.navCtrl.push(SearchBloodPage);
