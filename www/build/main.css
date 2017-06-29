@@ -27490,6 +27490,10 @@ ion-content {
   background-image: url("../assets/back.jpg");
 }
 
+.search, .btnSearch, .btnDonate {
+  background-color: transparent;
+}
+
 /* splash screen*/
 #custom-overlay {
   position: fixed;
