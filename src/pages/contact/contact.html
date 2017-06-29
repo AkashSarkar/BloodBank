@@ -7,23 +7,25 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content no-lines class="card">
   <ion-refresher (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content 
+    <ion-refresher-content no-lines
       pullingIcon="arrow-dropdown"
       pullingText="Pull to refresh"
       refreshingSpinner="circles"
       refreshingText="Refreshing...">
       </ion-refresher-content>
   </ion-refresher>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
+  <ion-list >
+    <ion-item *ngFor="let item of items"  class="Dlist">
+     
       <ion-avatar item-start>
-         {{ item.blood_type }}
-      </ion-avatar>
+       
+        {{ item.blood_type }}
+    </ion-avatar>
       <h2>{{ item.name }}</h2>
       <h3>AGE: {{item.age}}</h3>
-      <h4>PHONE: {{item.phone}}</h4>
+     <a href="tel:{{item.phone}}" item-end > <ion-icon  name="call" class="cIcon"></ion-icon></a>
       <p>LOCATION: {{item.address}}</p>
     </ion-item>
   </ion-list>

@@ -27455,6 +27455,28 @@ ion-navbar.toolbar {
   }
 }
 
+.Dlist {
+  background-image: url("../assets/li.jpg");
+  color: white;
+}
+
+.Dlist ion-avatar {
+  background-image: url("../assets/list.png");
+  height: 55px;
+  width: 40px;
+  text-align: center;
+  padding-top: 17px;
+  font-size: 18px;
+}
+
+.cIcon {
+  color: white;
+}
+
+.cIcon:hover {
+  color: greenyellow;
+}
+
 page-home .btnSearch {
   text-align: center !important;
   margin-top: 40%;
@@ -27462,6 +27484,10 @@ page-home .btnSearch {
 
 page-home .btnDonate {
   text-align: center !important;
+}
+
+ion-content {
+  background-image: url("../assets/back.jpg");
 }
 
 /* splash screen*/
@@ -27761,10 +27787,6 @@ page-home .btnDonate {
 
 /* end animation logo */
 /*end  splash screen*/
-ion-content {
-  background-image: url("../../img/back.jpg");
-}
-
 .card ion-avatar img {
   margin-left: 25%;
   width: 50%;

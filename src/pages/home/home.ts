@@ -18,7 +18,7 @@ export class HomePage {
     this.tabBarElement=document.querySelector('.tabbar');
 }
 
-  sBlood(){
+  sBlood() {
     this.navCtrl.push(SearchBloodPage);
   }
 

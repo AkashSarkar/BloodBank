@@ -27464,6 +27464,10 @@ page-home .btnDonate {
   text-align: center !important;
 }
 
+ion-content {
+  background-image: url("../assets/back.jpg");
+}
+
 /* splash screen*/
 #custom-overlay {
   position: fixed;
@@ -27761,10 +27765,6 @@ page-home .btnDonate {
 
 /* end animation logo */
 /*end  splash screen*/
-ion-content {
-  background-image: url("../../img/back.jpg");
-}
-
 .card ion-avatar img {
   margin-left: 25%;
   width: 50%;
