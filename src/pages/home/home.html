@@ -14,25 +14,42 @@
 <ion-header>
 
   <ion-navbar color="danger">
-    <ion-item class="search" no-lines>
+    <ion-item class="bsearch" no-lines>
        <ion-title>Home</ion-title>
-       
-       <ion-icon name="search" item-end></ion-icon>
-       </ion-item>
+       <ion-icon name="search" item-end (click)="sBlood()"></ion-icon> 
+     </ion-item>
     
   </ion-navbar>
   
 </ion-header>
     
-<ion-content >
-    <ion-list no-lines >
-      <ion-item class="btnSearch">
-        <button   ion-button round large (click)="sBlood()">Search Blood</button>
-      </ion-item>
+<ion-content class="card-background-page" >
+    
      
-      <ion-item class="btnDonate"> 
-         <button ion-button color="secondary" round large >Donate blood</button>
-      </ion-item>
-      
-    </ion-list>
+     
+
+  <ion-card>
+    <img src="assets/deepita.jpg"/>
+    <div class="card-title">São Paulo</div>
+    <div class="card-subtitle">41 Listings</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="img/card-amsterdam.png"/>
+    <div class="card-title">Amsterdam</div>
+    <div class="card-subtitle">64 Listings</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="img/card-sf.png"/>
+    <div class="card-title">San Francisco</div>
+    <div class="card-subtitle">72 Listings</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="img/card-madison.png"/>
+    <div class="card-title">Madison</div>
+    <div class="card-subtitle">28 Listings</div>
+  </ion-card>
+
 </ion-content>

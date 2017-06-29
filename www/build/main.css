@@ -27490,7 +27490,7 @@ ion-content {
   background-image: url("../assets/back.jpg");
 }
 
-.search, .btnSearch, .btnDonate {
+.bsearch, .btnSearch, .btnDonate {
   background-color: transparent;
 }
 

@@ -16,6 +16,11 @@ export class DataServicesProvider {
     
     }
 
+    search(){
+      return this.http.get('https://www.uiubloodbank.ml/API/search.php')
+      .map(res =>res.json());
+    }
+
     
 
 }
