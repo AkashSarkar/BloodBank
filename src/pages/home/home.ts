@@ -30,7 +30,7 @@ export class HomePage {
     setTimeout(()=>{
       this.splash=false;
       this.tabBarElement.style.display='flex';
-    },3500);
+    },3500);   //3500ms
   }
 
 }

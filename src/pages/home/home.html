@@ -3,7 +3,7 @@
 <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
   <div class="flb">
     <div class="Aligner-item Aligner-item--top"></div>
-     <img src="assets/logo1.png">
+     <img src="assets/logobb.png">
     <div class="Aligner-item Aligner-item--bottom"></div>
   </div>
 </div>
@@ -13,24 +13,30 @@
   
 <ion-header>
 
-  <ion-navbar color="danger">
-    <ion-item class="bsearch" no-lines>
-       <ion-title>Home</ion-title>
-       <ion-icon name="search" item-end (click)="sBlood()"></ion-icon> 
-     </ion-item>
+  <ion-navbar no-shadow color="danger">
+    <ion-title>Blood Bank </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only  (click)="sBlood()"> 
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+   
     
   </ion-navbar>
   
 </ion-header>
-    
-<ion-content >
+
+
+<ion-content no-lines>
   <ion-list >
-    <ion-item class="home-card"  *ngFor="let item of hospital">
-      <ion-card >
+    <ion-item class="home-card" no-lines *ngFor="let item of hospital">
+      <ion-card class="I-Card">
         <img src="{{item.images}}"/>
-        <ion-card-content>
-            <ion-card-title>{{item.name}}</ion-card-title>
-            <ion-card-title>{{item.address}}</ion-card-title>
+        <ion-card-content >
+            <h2>{{item.name}}</h2>
+            <ion-card-title> <a href="tel:{{item.phone}}">Phone :  {{item.phone}}</a></ion-card-title>
+            <p text-wrap> Address : {{item.address}} </p>
+            <ion-card-title></ion-card-title>
         </ion-card-content>
       </ion-card>
     </ion-item>

@@ -11,14 +11,49 @@ page-home {
 }
 
 ion-content{
-    background-image: url('../assets/back.jpg');
+  background-image: linear-gradient(rgba(160, 3, 3, 0.4),rgba(160, 3, 3, 0.7)),url('../assets/backGr.png');
+    background-size: cover;
+    background-position: center;
+
+ 
      
 }
-.bsearch ,.btnSearch,.btnDonate,.card-ios
+.nav
+{
+  box-shadow: none;
+  background-color: #BD0100;
+}
+
+
+
+.btnSearch,.btnDonate,.card-ios,.home-card
 {
   background-color: rgba(0,0,0,0);
 }
-
+.I-Card
+{
+  background-color:#BD0100;
+  color: whitesmoke;
+}
+.I-Card ion-card-title a
+{
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.I-Card p
+{
+  color:#BDBDBD;
+  font-size:14px;
+  font-weight: 500;
+  
+}
+.I-Card h2
+{
+  color:white;
+  font-weight: 700;
+}
 
                                         /* splash screen*/
 
@@ -39,7 +74,7 @@ ion-content{
   background-color:#D30707;
   height:100%;
   width:100%;
-  animation: pulse 1s linear forwards;
+  animation: pulse 50ms linear forwards;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +94,7 @@ ion-content{
   width: 50%;
   height: auto;
   animation: animation 3100ms linear infinite both;
-  animation-delay: 1s;
+  animation-delay: 450ms;
 }
 @keyframes pulse {
   0% {
@@ -80,10 +115,29 @@ ion-content{
 
 .animation-target {
   -webkit-animation: animation 1000ms linear both;
-  animation: animation 1000ms linear both;
+  animation: animation 600ms linear both;
+
+}
+                                              
+                                              /*fadeIn animation start*/
+@keyframes animation{
+    from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
 }
 
-/* Generated with Bounce.js. Edit at https://goo.gl/y3FSYm */
+.animation {
+  animation-name: animation;
+}
+
+                                              /*fadeIn animation end*/
+                                              /*js for animation*/
+
 
 @-webkit-keyframes animation { 
   0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
@@ -113,7 +167,7 @@ ion-content{
   90.69% { -webkit-transform: matrix3d(1.999, 0, 0, 0, 0, 1.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.999, 0, 0, 0, 0, 1.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   100% { -webkit-transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
 }
-
+/*bounce animation
 @keyframes animation { 
   0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   3.4% { -webkit-transform: matrix3d(1.316, 0, 0, 0, 0, 1.407, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.316, 0, 0, 0, 0, 1.407, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
@@ -149,4 +203,4 @@ ion-content{
 
                                                        /*end  splash screen*/
 
-                                                       
+                                                      

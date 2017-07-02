@@ -20314,7 +20314,7 @@ var /** @type {?} */ CLS = {
 /* unused harmony reexport Content */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_datetime_datetime__ = __webpack_require__(126);
 /* unused harmony reexport DateTime */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_fab_fab__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_fab_fab__ = __webpack_require__(40);
 /* unused harmony reexport FabButton */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_fab_fab_container__ = __webpack_require__(127);
 /* unused harmony reexport FabContainer */
@@ -20471,7 +20471,7 @@ var /** @type {?} */ CLS = {
 /* unused harmony reexport Footer */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_98__components_toolbar_toolbar_header__ = __webpack_require__(174);
 /* unused harmony reexport Header */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_99__components_toolbar_toolbar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_99__components_toolbar_toolbar__ = __webpack_require__(44);
 /* unused harmony reexport Toolbar */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_100__components_toolbar_toolbar_item__ = __webpack_require__(175);
 /* unused harmony reexport ToolbarItem */
@@ -20508,7 +20508,7 @@ var /** @type {?} */ CLS = {
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_114__navigation_ionic_page__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_115__navigation_nav_controller__ = __webpack_require__(20);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_115__navigation_nav_controller__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_116__navigation_nav_controller_base__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_116__navigation_nav_controller_base__ = __webpack_require__(46);
 /* unused harmony reexport NavControllerBase */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_117__navigation_nav_params__ = __webpack_require__(16);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_117__navigation_nav_params__["a"]; });
@@ -20524,7 +20524,7 @@ var /** @type {?} */ CLS = {
 /* unused harmony reexport DeepLinkConfigToken */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_121__navigation_view_controller__ = __webpack_require__(5);
 /* unused harmony reexport ViewController */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_122__gestures_pan_gesture__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_122__gestures_pan_gesture__ = __webpack_require__(45);
 /* unused harmony reexport PanGesture */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_123__gestures_gesture__ = __webpack_require__(233);
 /* unused harmony reexport Gesture */
@@ -30204,7 +30204,7 @@ var /** @type {?} */ KEY_TAB = 9;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrowserModule; });
 /* unused harmony export platformBrowser */
@@ -37698,6 +37698,53 @@ function flattenUnsubscriptionErrors(errors) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(249);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataServicesProvider; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var DataServicesProvider = (function () {
+    function DataServicesProvider(http) {
+        this.http = http;
+    }
+    DataServicesProvider.prototype.load = function () {
+        return this.http.get('https://www.uiubloodbank.ml/API/api.php')
+            .map(function (res) { return res.json(); });
+    };
+    DataServicesProvider.prototype.search = function () {
+        return this.http.get('https://www.uiubloodbank.ml/API/search.php')
+            .map(function (res) { return res.json(); });
+    };
+    DataServicesProvider.prototype.hospitals = function () {
+        return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
+            .map(function (res) { return res.json(); });
+    };
+    return DataServicesProvider;
+}());
+DataServicesProvider = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+], DataServicesProvider);
+
+//# sourceMappingURL=data-services.js.map
+
+/***/ }),
+/* 39 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* unused harmony export NgLocaleLocalization */
 /* unused harmony export NgLocalization */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return CommonModule; });
@@ -41715,7 +41762,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Version */]
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -41834,7 +41881,7 @@ function FabButton_tsickle_Closure_declarations() {
 //# sourceMappingURL=fab.js.map
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -41891,7 +41938,7 @@ function updateRealIndex(s) {
 //# sourceMappingURL=swiper-index.js.map
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -41970,16 +42017,16 @@ function updateSlidesProgress(s, translate) {
 //# sourceMappingURL=swiper-progress.js.map
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__swiper_utils__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__swiper_transition__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swiper_progress__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swiper_progress__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__swiper_classes__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__swiper_parallax__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__swiper_index__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__swiper_index__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__swiper_effects__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__swiper_pagination__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__swiper_zoom__ = __webpack_require__(164);
@@ -42943,7 +42990,7 @@ function destroySwiper(s) {
 //# sourceMappingURL=swiper.js.map
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43109,7 +43156,7 @@ function Toolbar_tsickle_Closure_declarations() {
 //# sourceMappingURL=toolbar.js.map
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43354,7 +43401,7 @@ function PanGesture_tsickle_Closure_declarations() {
 //# sourceMappingURL=pan-gesture.js.map
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -44717,7 +44764,7 @@ var /** @type {?} */ ACTIVE_TRANSITION_OFFSET = 2000;
 //# sourceMappingURL=nav-controller-base.js.map
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -44832,53 +44879,6 @@ function TransitionController_tsickle_Closure_declarations() {
     TransitionController.prototype._config;
 }
 //# sourceMappingURL=transition-controller.js.map
-
-/***/ }),
-/* 47 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(249);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataServicesProvider; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var DataServicesProvider = (function () {
-    function DataServicesProvider(http) {
-        this.http = http;
-    }
-    DataServicesProvider.prototype.load = function () {
-        return this.http.get('https://www.uiubloodbank.ml/API/api.php')
-            .map(function (res) { return res.json(); });
-    };
-    DataServicesProvider.prototype.search = function () {
-        return this.http.get('https://www.uiubloodbank.ml/API/search.php')
-            .map(function (res) { return res.json(); });
-    };
-    DataServicesProvider.prototype.hospitals = function () {
-        return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
-            .map(function (res) { return res.json(); });
-    };
-    return DataServicesProvider;
-}());
-DataServicesProvider = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
-], DataServicesProvider);
-
-//# sourceMappingURL=data-services.js.map
 
 /***/ }),
 /* 48 */
@@ -46174,7 +46174,7 @@ function Backdrop_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__platform_platform__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__fab__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__fab__ = __webpack_require__(40);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FabList; });
 
 
@@ -49022,9 +49022,9 @@ function NavPush_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__gestures_gesture_controller__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__platform_keyboard__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__navigation_nav_controller__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navigation_nav_controller_base__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navigation_nav_controller_base__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__platform_platform__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__transitions_transition_controller__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__transitions_transition_controller__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__navigation_view_controller__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__split_pane_split_pane__ = __webpack_require__(34);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Nav; });
@@ -51847,7 +51847,7 @@ function DisplayWhen_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__swiper_swiper_events__ = __webpack_require__(228);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__swiper_swiper_zoom__ = __webpack_require__(164);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__platform_platform__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__swiper_swiper__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__swiper_swiper__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__swiper_swiper_effects__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__navigation_view_controller__ = __webpack_require__(5);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Slides; });
@@ -54133,8 +54133,8 @@ function updatePaginationClasses(s) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__swiper_utils__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__swiper_parallax__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swiper_progress__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__swiper_index__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swiper_progress__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__swiper_index__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__swiper_controller__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__swiper_effects__ = __webpack_require__(83);
 /* harmony export (immutable) */ __webpack_exports__["a"] = setWrapperTranslate;
@@ -55862,7 +55862,7 @@ var FeedPage = (function () {
 FeedPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-feed',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/feed/feed.html"*/'\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>Help & Feed BacK</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/feed/feed.html"*/,
+        selector: 'page-feed',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/feed/feed.html"*/'\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>Help & Feed BacK</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/feed/feed.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], FeedPage);
@@ -55907,7 +55907,7 @@ var ForumPage = (function () {
 ForumPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-forum',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/forum/forum.html"*/'\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>Forum</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/forum/forum.html"*/,
+        selector: 'page-forum',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/forum/forum.html"*/'\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>Forum</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/forum/forum.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ForumPage);
@@ -55952,7 +55952,7 @@ var ManageAccountPage = (function () {
 ManageAccountPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-manage-account',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/manage-account/manage-account.html"*/'\n<ion-header>\n\n  <ion-navbar color = "danger">\n    <ion-title>Manage Account</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/manage-account/manage-account.html"*/,
+        selector: 'page-manage-account',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/manage-account/manage-account.html"*/'\n<ion-header>\n\n  <ion-navbar color = "danger">\n    <ion-title>Manage Account</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/manage-account/manage-account.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ManageAccountPage);
@@ -55997,7 +55997,7 @@ var NotificationPage = (function () {
 NotificationPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-notification',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/notification/notification.html"*/'<ion-header>\n  <ion-navbar color="danger">\n    <ion-title>\n     Notification\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n \n</ion-content>'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/notification/notification.html"*/,
+        selector: 'page-notification',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/notification/notification.html"*/'<ion-header>\n  <ion-navbar color="danger">\n    <ion-title>\n     Notification\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n \n</ion-content>'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/notification/notification.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], NotificationPage);
@@ -56056,7 +56056,7 @@ var ProfilePage = (function () {
 ProfilePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar color="danger">\n    <ion-title>\n      Profile\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card">\n  \n   \n      \n       <ion-item class="ava" no-lines>\n          <ion-avatar>\n             <img src="assets/deepita.jpg">\n          </ion-avatar>\n       \n                <h2>Deepita Saha</h2>\n                <p>Last Date of donation : 28/8/16 .</p>\n          \n            \n        </ion-item>\n\n        <div class="ion-list-inset" no-lines>\n   \n              <div class="item item-icon-right" class="listColor" no-lines>\n                <ion-item  no-lines (click)="_notification()">\n                   <ion-icon name="notifications" item-left></ion-icon>\n                   <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Notification\n                </ion-item>\n                <ion-item no-lines (click)="_forum()">\n                   <ion-icon name="logo-buffer" item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Forum\n                </ion-item>\n                \n                <ion-item no-lines (click)="_manage()">\n                <ion-icon name="settings"  item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright"item-right></ion-icon>\n                   Manage Account\n                </ion-item>\n                <ion-item no-lines (click)="_hFeedBack()">\n                    <ion-icon name="help-circle"  item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Help & Feedback\n                </ion-item>\n                <ion-item no-lines>\n                  <ion-icon name="log-out" item-left></ion-icon>\n\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Log Out\n                </ion-item>\n                  \n               </div>\n        </div> \n            \n\n  \n  \n</ion-content>\n\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/profile/profile.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar color="danger">\n    <ion-title>\n      Profile\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card">\n  \n   \n      \n       <ion-item class="ava" no-lines>\n          <ion-avatar>\n             <img src="assets/deepita.jpg">\n          </ion-avatar>\n       \n                <h2>Deepita Saha</h2>\n                <p>Last Date of donation : 28/8/16 .</p>\n          \n            \n        </ion-item>\n\n        <div class="ion-list-inset" no-lines>\n   \n              <div class="item item-icon-right" class="listColor" no-lines>\n                <ion-item  no-lines (click)="_notification()">\n                   <ion-icon name="notifications" item-left></ion-icon>\n                   <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Notification\n                </ion-item>\n                <ion-item no-lines (click)="_forum()">\n                   <ion-icon name="logo-buffer" item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Forum\n                </ion-item>\n                \n                <ion-item no-lines (click)="_manage()">\n                <ion-icon name="settings"  item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright"item-right></ion-icon>\n                   Manage Account\n                </ion-item>\n                <ion-item no-lines (click)="_hFeedBack()">\n                    <ion-icon name="help-circle"  item-left></ion-icon>\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Help & Feedback\n                </ion-item>\n                <ion-item no-lines>\n                  <ion-icon name="log-out" item-left></ion-icon>\n\n                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>\n                   Log Out\n                </ion-item>\n                  \n               </div>\n        </div> \n            \n\n  \n  \n</ion-content>\n\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/profile/profile.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ProfilePage);
@@ -56119,7 +56119,7 @@ var SearchBloodPage = (function () {
 SearchBloodPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-search-blood',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/search-blood/search-blood.html"*/'\n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>SearchBlood</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <ion-list>\n    <ion-item *ngFor="let item of items">\n      {{ item }}\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/search-blood/search-blood.html"*/,
+        selector: 'page-search-blood',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/search-blood/search-blood.html"*/'\n<ion-header>\n\n  <ion-navbar no-shadow color="danger">\n    <ion-title>SearchBlood</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <ion-list>\n    <ion-item *ngFor="let item of items">\n      {{ item }}\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/search-blood/search-blood.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], SearchBloodPage);
@@ -56146,7 +56146,7 @@ webpackEmptyContext.id = 105;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_data_services_data_services__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_data_services_data_services__ = __webpack_require__(38);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56173,7 +56173,7 @@ var AboutPage = (function () {
 }());
 AboutPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-about',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/about/about.html"*/'<ion-header>\n  \n  <ion-navbar color="danger">\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <table>\n    <tr>\n      <th>Name</th>\n      <th>Blood Type</th> \n      <th>Age</th>\n    </tr>\n    <tr *ngFor="let item of items">\n      <td>{{ item.name }}</td>\n      <td>{{ item.blood_type }}</td>\n    </tr>\n    \n  </table>\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/about/about.html"*/
+        selector: 'page-about',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/about/about.html"*/'<ion-header>\n  \n  <ion-navbar color="danger">\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="about" padding>\n  <table>\n    <tr>\n      <th>Name</th>\n      <th>Blood Type</th> \n      <th>Age</th>\n    </tr>\n    <tr *ngFor="let item of items">\n      <td>{{ item.name }}</td>\n      <td>{{ item.blood_type }}</td>\n    </tr>\n    \n  </table>\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/about/about.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_data_services_data_services__["a" /* DataServicesProvider */]])
 ], AboutPage);
@@ -56187,7 +56187,7 @@ AboutPage = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_data_services_data_services__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_data_services_data_services__ = __webpack_require__(38);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56226,7 +56226,7 @@ var ContactPage = (function () {
 }());
 ContactPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-contact',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/contact/contact.html"*/'<ion-header>\n  \n  <ion-navbar color="danger">\n    <ion-title>\n      Available Donor\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-lines class="card">\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content no-lines\n      pullingIcon="arrow-dropdown"\n      pullingText="Pull to refresh"\n      refreshingSpinner="circles"\n      refreshingText="Refreshing...">\n      </ion-refresher-content>\n  </ion-refresher>\n  <ion-list >\n    <ion-item *ngFor="let item of items"  class="Dlist">\n     \n      <ion-avatar item-start>\n       \n        {{ item.blood_type }}\n    </ion-avatar>\n      <h2>{{ item.name }}</h2>\n      <h3>AGE: {{item.age}}</h3>\n     <a href="tel:{{item.phone}}" item-end > <ion-icon  name="call" class="cIcon"></ion-icon></a>\n      <p>LOCATION: {{item.address}}</p>\n    </ion-item>\n    \n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/contact/contact.html"*/
+        selector: 'page-contact',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/contact/contact.html"*/'<ion-header>\n  \n  <ion-navbar color="danger">\n    <ion-title>\n      Available Donor\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-lines class="card">\n  <ion-refresher (ionRefresh)="doRefresh($event)" no-lines>\n    <ion-refresher-content no-lines\n      pullingIcon="arrow-dropdown"\n      pullingText="Pull to refresh"\n      refreshingSpinner="circles"\n      refreshingText="Refreshing...">\n      </ion-refresher-content>\n  </ion-refresher>\n  <ion-list no-lines  class="d">\n    <ion-item *ngFor="let item of items"  class="Dlist">\n     \n          <ion-avatar item-start>\n       \n            {{ item.blood_type }}\n          </ion-avatar>\n         <h2>{{ item.name }}</h2>\n         <h3>AGE: {{item.age}}</h3>\n             <a href="tel:{{item.phone}}" item-end > <ion-icon  name="call" class="cIcon"></ion-icon></a>\n         <p text-wrap>Location: {{item.address}}</p>\n    </ion-item>\n    \n    \n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/contact/contact.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_data_services_data_services__["a" /* DataServicesProvider */]])
 ], ContactPage);
@@ -56241,7 +56241,7 @@ ContactPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search_blood_search_blood__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_data_services_data_services__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_data_services_data_services__ = __webpack_require__(38);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56276,18 +56276,17 @@ var HomePage = (function () {
         setTimeout(function () {
             _this.splash = false;
             _this.tabBarElement.style.display = 'flex';
-        }, 3500);
+        }, 3500); //3500ms
     };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/home/home.html"*/'<!--splash screen code-->\n\n<div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n  <div class="flb">\n    <div class="Aligner-item Aligner-item--top"></div>\n     <img src="assets/logo1.png">\n    <div class="Aligner-item Aligner-item--bottom"></div>\n  </div>\n</div>\n<!--splash screen end-->\n\n\n  \n<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-item class="bsearch" no-lines>\n       <ion-title>Home</ion-title>\n       <ion-icon name="search" item-end (click)="sBlood()"></ion-icon> \n     </ion-item>\n    \n  </ion-navbar>\n  \n</ion-header>\n    \n<ion-content >\n  <ion-list >\n    <ion-item class="home-card"  *ngFor="let item of hospital">\n      <ion-card >\n        <img src="{{item.images}}"/>\n        <ion-card-content>\n            <ion-card-title>{{item.name}}</ion-card-title>\n            <ion-card-title>{{item.address}}</ion-card-title>\n        </ion-card-content>\n      </ion-card>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/home/home.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/home/home.html"*/'<!--splash screen code-->\n\n<div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n  <div class="flb">\n    <div class="Aligner-item Aligner-item--top"></div>\n     <img src="assets/logobb.png">\n    <div class="Aligner-item Aligner-item--bottom"></div>\n  </div>\n</div>\n<!--splash screen end-->\n\n\n  \n<ion-header>\n\n  <ion-navbar no-shadow color="danger">\n    <ion-title>Blood Bank </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only  (click)="sBlood()"> \n        <ion-icon name="search"></ion-icon>\n      </button>\n    </ion-buttons>\n   \n    \n  </ion-navbar>\n  \n</ion-header>\n\n\n<ion-content no-lines>\n  <ion-list >\n    <ion-item class="home-card" no-lines *ngFor="let item of hospital">\n      <ion-card class="I-Card">\n        <img src="{{item.images}}"/>\n        <ion-card-content >\n            <h2>{{item.name}}</h2>\n            <ion-card-title> <a href="tel:{{item.phone}}">Phone :  {{item.phone}}</a></ion-card-title>\n            <p text-wrap> Address : {{item.address}} </p>\n            <ion-card-title></ion-card-title>\n        </ion-card-content>\n      </ion-card>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/home/home.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__providers_data_services_data_services__["a" /* DataServicesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_data_services_data_services__["a" /* DataServicesProvider */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_data_services_data_services__["a" /* DataServicesProvider */]])
 ], HomePage);
 
-var _a, _b;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -56325,7 +56324,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/pages/tabs/tabs.html"*/'<ion-tabs color="dark" >\n  <ion-tab  color ="danger"[root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Donor" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Profile" tabIcon="contact" tabBadge="1"></ion-tab>\n  <ion-tab [root]="tab4Root"tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n</ion-tabs>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/pages/tabs/tabs.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/tabs/tabs.html"*/'<ion-tabs color="dark" >\n  <ion-tab  color ="danger"[root]="tab1Root" tabTitle="Blood Bank" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Donor" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Profile" tabIcon="contact" tabBadge="1"></ion-tab>\n  <ion-tab [root]="tab4Root"tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n</ion-tabs>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/pages/tabs/tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -59690,9 +59689,9 @@ function AlertController_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_dom_controller__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__gestures_gesture_controller__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__platform_keyboard__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__navigation_nav_controller_base__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__navigation_nav_controller_base__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__platform_platform__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__transitions_transition_controller__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__transitions_transition_controller__ = __webpack_require__(47);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OverlayPortal; });
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -61474,7 +61473,7 @@ var /** @type {?} */ DEFAULT_FORMAT = 'MMM D, YYYY';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gestures_ui_event_manager__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__fab__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__fab__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__fab_list__ = __webpack_require__(55);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FabContainer; });
 
@@ -71322,10 +71321,10 @@ function TabButton_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__gestures_gesture_controller__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__platform_keyboard__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navigation_nav_controller_base__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navigation_nav_controller_base__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__tabs__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__transitions_transition_controller__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__transitions_transition_controller__ = __webpack_require__(47);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Tab; });
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -72701,7 +72700,7 @@ function Header_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ion__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navbar__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__toolbar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__toolbar__ = __webpack_require__(44);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToolbarItem; });
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -72796,7 +72795,7 @@ function ToolbarItem_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ion__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navbar__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__toolbar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__toolbar__ = __webpack_require__(44);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToolbarTitle; });
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -74333,7 +74332,7 @@ var /** @type {?} */ POINTER_EVENT_TYPE_TOUCH = 2;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pan_gesture__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pan_gesture__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_dom__ = __webpack_require__(9);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SlideGesture; });
@@ -77240,7 +77239,7 @@ webpackAsyncContext.id = 204;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_splash_screen__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_search_blood_search_blood__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_http__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_data_services_data_services__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_data_services_data_services__ = __webpack_require__(38);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -77332,7 +77331,7 @@ AppModule = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_compiler__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(24);
 /* unused harmony export RESOURCE_CACHE_PROVIDER */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return platformBrowserDynamic; });
@@ -77549,7 +77548,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/home/devil/Desktop/BloodBank/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/devil/Desktop/BloodBank/src/app/app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/deepiuiu/Documents/Software/MyBloodBank/BloodBank/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -105166,7 +105165,7 @@ var /** @type {?} */ ITEM_REORDER_ACTIVE = 'reorder-active';
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gestures_gesture_controller__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__gestures_pan_gesture__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__gestures_pan_gesture__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_dom__ = __webpack_require__(9);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemSlidingGesture; });
 var __extends = (this && this.__extends) || (function () {
@@ -106670,10 +106669,10 @@ function onEnterKey(s, event) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__swiper__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__swiper_index__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__swiper__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__swiper_index__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swiper_utils__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__swiper_progress__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__swiper_progress__ = __webpack_require__(42);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SWIPER_CONTROLLER; });
 
 
@@ -106807,9 +106806,9 @@ var /** @type {?} */ SWIPER_CONTROLLER = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__swiper_utils__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__swiper_transition__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swiper__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__swiper_progress__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__swiper_index__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swiper__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__swiper_progress__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__swiper_index__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__swiper_pagination__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__swiper_classes__ = __webpack_require__(82);
 /* harmony export (immutable) */ __webpack_exports__["a"] = initEvents;
@@ -107629,7 +107628,7 @@ function doResize(s, plt, forceUpdatePagination) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__swiper_utils__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__swiper__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__swiper__ = __webpack_require__(43);
 /* harmony export (immutable) */ __webpack_exports__["a"] = enableKeyboardControl;
 
 
@@ -107989,7 +107988,7 @@ var /** @type {?} */ TOAST_POSITION_MIDDLE = 'middle';
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gestures_gesture_controller__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__gestures_pan_gesture__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__gestures_pan_gesture__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_dom__ = __webpack_require__(9);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToggleGesture; });
 var __extends = (this && this.__extends) || (function () {
@@ -111109,7 +111108,7 @@ function PanRecognizer_tsickle_Closure_declarations() {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_app_app__ = __webpack_require__(6);
@@ -111129,7 +111128,7 @@ function PanRecognizer_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__platform_platform_registry__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__tap_click_tap_click__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__config_mode_registry__ = __webpack_require__(179);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__transitions_transition_controller__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__transitions_transition_controller__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__navigation_url_serializer__ = __webpack_require__(184);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_action_sheet_action_sheet_component__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_action_sheet_action_sheet_controller__ = __webpack_require__(115);
@@ -111149,7 +111148,7 @@ function PanRecognizer_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_chip_chip__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_content_content__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__components_datetime_datetime__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_fab_fab__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_fab_fab__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__components_fab_fab_container__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__components_fab_fab_list__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_grid_col__ = __webpack_require__(128);
@@ -111221,7 +111220,7 @@ function PanRecognizer_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_110__components_toggle_toggle__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_111__components_toolbar_toolbar_footer__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_112__components_toolbar_toolbar_header__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_113__components_toolbar_toolbar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_113__components_toolbar_toolbar__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_114__components_toolbar_toolbar_item__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_115__components_toolbar_toolbar_title__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_116__components_toolbar_navbar__ = __webpack_require__(35);

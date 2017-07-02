@@ -1,22 +1,26 @@
-page-contact {
 
-}
 
 .Dlist 
 {
     background-image: url('../assets/li.jpg');
-  
-  // background-color: rgba(160, 3, 3, 0.0);
-   color :white; 
+    background-position:center;
+    background-size:cover;
+    color :white; 
+    //background-color:#ff6f00;
+    padding-block-end: 6px;
+    margin-bottom: 1px;
+
+   
    
 }
+
 .Dlist ion-avatar
 {
      background-image: url('../assets/list.png');
+     background-size:cover;
      height: 55px;
      width: 40px;
      text-align: center;
-     //padding: 9px;
      padding-top: 17px; 
      font-size:18px;
 }
@@ -29,4 +33,18 @@ page-contact {
 .cIcon:hover
 {
   color: greenyellow;
+}
+
+.Dlist h2
+{
+  font-weight: 800;
+}
+.Dlist h3
+{
+  font-weight: 600;
+}
+.Dlist p
+{
+  color: lightcyan;
+  font-weight: 500;
 }
