@@ -2,14 +2,15 @@
 
 .Dlist 
 {
-    background-image: url('../assets/li.jpg');
+    background-image: linear-gradient(rgba(160, 3, 3, 0.4),
+  rgba(160, 3, 3, 0.3)),url('../assets/li.jpg');
     background-position:center;
     background-size:cover;
     color :white; 
     //background-color:#ff6f00;
     padding-block-end: 6px;
-    margin-bottom: 1px;
-
+    margin-bottom: 2px;
+  
    
    
 }
@@ -45,6 +46,6 @@
 }
 .Dlist p
 {
-  color: lightcyan;
+  color: coral;
   font-weight: 500;
 }

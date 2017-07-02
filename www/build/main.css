@@ -29761,13 +29761,13 @@ ion-navbar.toolbar {
 }
 
 .Dlist {
-  background-image: url("../assets/li.jpg");
+  background-image: linear-gradient(rgba(160, 3, 3, 0.4), rgba(160, 3, 3, 0.3)), url("../assets/li.jpg");
   background-position: center;
   background-size: cover;
   color: white;
   -webkit-padding-after: 6px;
   padding-block-end: 6px;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
 }
 
 .Dlist ion-avatar {
@@ -29797,7 +29797,7 @@ ion-navbar.toolbar {
 }
 
 .Dlist p {
-  color: lightcyan;
+  color: coral;
   font-weight: 500;
 }
 
@@ -29811,7 +29811,7 @@ page-home .btnDonate {
 }
 
 ion-content {
-  background-image: linear-gradient(rgba(160, 3, 3, 0.6), rgba(160, 3, 3, 0.4)), url("../assets/backGr.png");
+  background-image: linear-gradient(rgba(160, 3, 3, 0.6), rgba(160, 3, 3, 0.9)), url("../assets/backGr.png");
   background-size: cover;
   background-position: center;
 }
@@ -29826,26 +29826,32 @@ ion-content {
 }
 
 .I-Card {
-  background-color: #BD0100;
+  background-color: rgba(189, 1, 0, 0.5);
   color: whitesmoke;
 }
 
 .I-Card ion-card-title a {
   color: #ffffff;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
 }
 
 .I-Card p {
-  color: #BDBDBD;
-  font-size: 14px;
+  color: coral;
+  font-size: 15px;
   font-weight: 500;
 }
 
 .I-Card h2 {
   color: white;
   font-weight: 700;
+  font-size: 18px;
+}
+
+.I-Card ion-card-title a:hover {
+  font-size: 18px;
+  color: #f44336;
 }
 
 /* splash screen*/
