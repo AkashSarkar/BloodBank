@@ -29811,7 +29811,7 @@ page-home .btnDonate {
 }
 
 ion-content {
-  background-image: linear-gradient(rgba(160, 3, 3, 0.4), rgba(160, 3, 3, 0.7)), url("../assets/backGr.png");
+  background-image: linear-gradient(rgba(160, 3, 3, 0.6), rgba(160, 3, 3, 0.4)), url("../assets/backGr.png");
   background-size: cover;
   background-position: center;
 }
