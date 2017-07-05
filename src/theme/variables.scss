@@ -26,9 +26,9 @@ $font-path: "../assets/fonts";
 $colors: (
   primary:    lightgray,
   secondary:  #32db64,
-  danger:     #BD0100,
+  danger:     #8A0808,//#8A0808 #BD0100
   light:      #f4f4f4,
-  dark:       #A90000,
+  dark:       #610B0B,//#A90000
   blak:        #000000
 );
 
@@ -44,11 +44,11 @@ $colors: (
 // Material Design only Sass variables can go here
 
 .tabs-md .tab-button {
-  color: #FFC400 !important;
+  color: darkgray !important;
  }
 
  .tabs-md .tab-button[aria-selected=true] {
-   color: #DD2C00 !important;
+   color: yellow !important;
  }
 
 // App Windows Variables

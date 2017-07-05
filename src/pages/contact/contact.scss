@@ -2,17 +2,16 @@
 
 .Dlist 
 {
-    background-image: linear-gradient(rgba(160, 3, 3, 0.4),
-  rgba(160, 3, 3, 0.3)),url('../assets/li.jpg');
-    background-position:center;
-    background-size:cover;
-    color :white; 
+    //background-image: linear-gradient(rgba(160, 3, 3, 0.4),rgba(160, 3, 3, 0.3)),url('../assets/li.jpg');
+    
+    //background-position:center;
+    //background-size:cover;
+    color : white; 
     //background-color:#ff6f00;
+    background-color: rgba(0,0,0,0);
     padding-block-end: 6px;
     margin-bottom: 2px;
-  
-   
-   
+    
 }
 
 .Dlist ion-avatar
@@ -24,6 +23,7 @@
      text-align: center;
      padding-top: 17px; 
      font-size:18px;
+     color: white;
 }
 .cIcon
 {

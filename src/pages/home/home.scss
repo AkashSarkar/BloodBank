@@ -11,8 +11,8 @@ page-home {
 }
 
 ion-content{
-    background-image: linear-gradient(rgba(160, 3, 3, 0.6),
-  rgba(160, 3, 3, 0.9)),url('../assets/backGr.png');
+   // background-image: linear-gradient(rgba(160, 3, 3, 0.6),rgba(160, 3, 3, 0.9)),url('../assets/backGr.png');
+    background-image: linear-gradient(rgba(169, 0, 0, 0.6),rgba(169, 0, 0, 0.6)), url('../assets/gray0.jpg');
     background-size: cover;
     background-position: center;
 
@@ -33,7 +33,7 @@ ion-content{
 }
 .I-Card
 {
-  background-color:rgba(189, 1, 0,0.5);
+  background-color:rgba(169, 0, 0,0.5);
   color: whitesmoke;
 }
 .I-Card ion-card-title a
