@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header >
   
   <ion-navbar color="danger">
     <ion-title>
@@ -7,7 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content no-lines class="card">
+<ion-content no-lines class="card" (ionScroll)="scrollFunction($event)" >
   <ion-refresher (ionRefresh)="doRefresh($event)" no-lines>
     <ion-refresher-content no-lines
       pullingIcon="arrow-dropdown"
@@ -16,8 +16,9 @@
       refreshingText="Refreshing...">
       </ion-refresher-content>
   </ion-refresher>
+
   <ion-list   class="d">
-    <ion-item *ngFor="let item of items"  class="Dlist">
+    <ion-item *ngFor="let item of listitem"  class="Dlist">
      
           <ion-avatar item-start>
        
@@ -31,4 +32,15 @@
     
     
   </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+   <ion-infinite-scroll-content>
+
+   </ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+ 
+
 </ion-content>
+ <button ion-button icon-only  (click)="topFunction()" id="myBtn" title="Go to top"> 
+        <ion-icon name="md-arrow-round-up"></ion-icon>
+</button>
