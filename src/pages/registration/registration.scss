@@ -1,0 +1,84 @@
+page-registration {
+    .background {
+		//background-image: url('../assets/blood.png');
+    position: relative;
+    background: url('../assets/reg.jpg') no-repeat transparent;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: animatedBackground 40s linear infinite;
+  }
+
+  @keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+  }
+
+
+	
+
+	ion-card.card {
+		box-shadow: none;
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 10px;
+	}
+
+	a, p,
+	ion-card-header.card-header {
+		color: #fff!important;
+	}
+
+	.list > .item-block:first-child {
+		border: medium none;
+	}
+
+	.item {
+		margin-bottom: 10px;
+		background: rgba(255, 255, 255, 0.5);
+		border: medium none;
+
+		.text-input, {
+			color: #fff;
+		}
+
+		input::-moz-placeholder  {
+			color: #fff!important;
+		}
+
+		input:-moz-placeholder {
+			color: #fff!important;
+		}
+
+		*::-webkit-input-placeholder  {
+			color: #fff!important;
+		}
+
+		*:-ms-input-placeholder  {
+			color: #fff!important;
+		}
+
+		*:-moz-placeholder  {
+			color: #fff!important;
+		}
+	}
+	.c{
+		color: white;
+	}
+	.regs{
+		color: wheat;
+		background-color: rgba(160, 3, 3, 0.4);
+		border: none;
+	}
+	#err{
+		color: orange;
+		margin-top: 8px;
+		font-family:Arial, Helvetica, sans-serif;
+		text-align: center;
+	}
+	.bottom
+	{
+		color: coral;
+	}
+
+}

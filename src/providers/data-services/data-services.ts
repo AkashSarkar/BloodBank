@@ -15,7 +15,6 @@ export class DataServicesProvider {
       .map(res =>res.json());
     
     }
-
     search(){
       return this.http.get('https://www.uiubloodbank.ml/API/search.php')
       .map(res =>res.json());
@@ -24,6 +23,15 @@ export class DataServicesProvider {
       return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
       .map(res =>res.json());
     }
+
+  postLogin(data){
+   let link = "https://uiubloodbank.ml/API/login.php";
+   return this.http.post(link,data);
+  }
+  postRegister(data){
+    let link = "https://uiubloodbank.ml/API/Register.php";
+      return this.http.post(link,data);    
+  }
 
     
 

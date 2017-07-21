@@ -1,0 +1,57 @@
+<ion-content class="background">
+	<ion-card>
+		<ion-card-header>
+			Register Form
+		</ion-card-header>
+		<ion-card-content>
+			<ion-list no-line>
+				<ion-item>
+					<ion-input  [(ngModel)]="data.username" name="username" type="text" placeholder="Username" ng-required="true"></ion-input>
+				</ion-item>
+				
+                <ion-item>
+					<ion-input numbers-only  [(ngModel)]="data.age" name="age" type="text" placeholder="Age" ng-required="true"></ion-input>
+				</ion-item>
+
+				<ion-item>
+                  <ion-label color="light">Gender</ion-label>
+                    <ion-select [(ngModel)]="data.gender" ng-required="true">
+                       <ion-option *ngFor="let g of gender" value="{{g.name}}">{{g.name}}</ion-option>
+                    </ion-select>
+				</ion-item>
+
+                <ion-item>
+                 <ion-label color="light">Enter bloodgroup</ion-label>
+                    <ion-select [(ngModel)]="data.bloodgroup" ng-required="true">
+                        <ion-option *ngFor="let b of blood" value="{{b.name}}">{{b.name}}</ion-option>
+                    </ion-select>
+				</ion-item>
+
+				<ion-item>
+					<ion-input numbers-only  [(ngModel)]="data.phone" name="phone" type="text" placeholder="Phone no." ng-required="true"></ion-input>
+				</ion-item>
+
+                <ion-item>
+                  <ion-label color="light">Enter location</ion-label>
+                     <ion-select color="li" [(ngModel)]="data.location" type="text" ng-required="true">
+                       <ion-option color="li" *ngFor="let l of location" value="{{l.name}}">{{l.name}}</ion-option>
+                    </ion-select>
+				</ion-item>
+
+                <ion-item>
+					<ion-input  [(ngModel)]="data.email" name="email" type="email" placeholder="Email" ng-required="true"></ion-input>
+				</ion-item>
+
+                <ion-item>
+					<ion-input  [(ngModel)]="data.password" name="password" type="password" placeholder="Password" ng-required="true"></ion-input>
+				</ion-item>
+				<button class="regs" ion-button block outline  (click)="register()">Register</button>
+				<div id="err"></div>	
+			</ion-list>
+		</ion-card-content>
+	<button ion-button clear full color="light" (click)="login()" class="bottom">Already have an account? Sign in</button>
+	</ion-card>
+</ion-content>
+
+
+

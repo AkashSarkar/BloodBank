@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { LoginPage } from '../pages/login/login';
+import { RegistrationPage } from '../pages/registration/registration';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
@@ -30,12 +32,27 @@ import { DataServicesProvider } from '../providers/data-services/data-services';
     ManageAccountPage,
     FeedPage,
     ForumPage,
+    LoginPage,
+    RegistrationPage,
     SearchBloodPage
+
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,
+    {
+        platforms : {
+          android : {
+            // These options are available in ionic-angular@2.0.0-beta.2 and up.
+            scrollAssist: false,    // Valid options appear to be [true, false]
+            autoFocusAssist: false  // Valid options appear to be ['instant', 'delay', false]
+          }
+          // http://ionicframework.com/docs/v2/api/config/Config/)
+        }
+      }
+    )
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,6 +66,8 @@ import { DataServicesProvider } from '../providers/data-services/data-services';
     ManageAccountPage,
     FeedPage,
     ForumPage,
+    LoginPage,
+    RegistrationPage,
     SearchBloodPage
   ],
   providers: [

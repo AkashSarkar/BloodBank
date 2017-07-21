@@ -1,0 +1,93 @@
+page-login {
+	 .splash-bg {
+    position: relative;
+    background: url('../assets/log1.jpg') no-repeat transparent;
+    background-size: cover;
+    height: 100%;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: animatedBackground 40s linear infinite;
+  }
+
+  @keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+  }
+
+	
+
+.sc {
+		align-content: center;
+        //display: flex;
+		//flex-direction: column;
+		justify-content: center;
+		margin-top: 40%;
+		text-align: center;
+		position: fixed;
+	}
+
+	ion-card.card {
+		box-shadow: none;
+		background: rgba(0, 0, 0, 0.6);
+		border-radius: 5px;
+		justify-content: center;
+	}
+
+	a, p,
+	ion-card-header.card-header {
+		color: #fff!important;
+	}
+
+	.list > .item-block:first-child {
+		border: medium none;
+	}
+
+	.item {
+		margin-bottom: 10px;
+		background: rgba(255, 255, 255, 0.6);
+		border: medium none;
+
+		.text-input, {
+			color: #fff;
+		}
+
+		input::-moz-placeholder  {
+			color: #fff!important;
+		}
+
+		input:-moz-placeholder {
+			color: #fff!important;
+		}
+
+		*::-webkit-input-placeholder  {
+			color: #fff!important;
+		}
+
+		*:-ms-input-placeholder  {
+			color: #fff!important;
+		}
+
+		*:-moz-placeholder  {
+			color: #fff!important;
+		}
+	}
+
+	.bottom {
+		position: absolute;
+		bottom: 0;
+	}
+	.reg
+	{
+		color: coral;
+	}
+	.er
+	{
+		color: orange;
+		margin-top: 8px;
+		font-family:Arial, Helvetica, sans-serif;
+		//padding: 2px;
+		//font-size: 6px;
+	}
+}
+
+

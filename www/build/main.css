@@ -30088,6 +30088,110 @@ ion-content {
 }
                                                         /* end animation logo */
 /*end  splash screen*/
+page-login .splash-bg {
+  position: relative;
+  background: url("../assets/log1.jpg") no-repeat transparent;
+  background-size: cover;
+  height: 100%;
+  z-index: 1;
+  background-repeat: repeat-x;
+  -webkit-animation: animatedBackground 40s linear infinite;
+  animation: animatedBackground 40s linear infinite;
+}
+
+@-webkit-keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+page-login .sc {
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 40%;
+  text-align: center;
+  position: fixed;
+}
+
+page-login ion-card.card {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+page-login a, page-login p,
+page-login ion-card-header.card-header {
+  color: #fff !important;
+}
+
+page-login .list > .item-block:first-child {
+  border: medium none;
+}
+
+page-login .item {
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border: medium none;
+}
+
+page-login .item .text-input {
+  color: #fff;
+}
+
+page-login .item input::-moz-placeholder {
+  color: #fff !important;
+}
+
+page-login .item input:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-login .item *::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+page-login .item *:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+page-login .item *:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-login .bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+page-login .reg {
+  color: coral;
+}
+
+page-login .er {
+  color: orange;
+  margin-top: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .card ion-avatar img {
   margin-left: 25%;
   width: 50%;
@@ -30116,4 +30220,90 @@ ion-content {
   background-color: rgba(255, 255, 255, 0);
   color: yellow;
   font-size: 22px;
+}
+
+page-registration .background {
+  position: relative;
+  background: url("../assets/reg.jpg") no-repeat transparent;
+  background-size: cover;
+  height: 100%;
+  z-index: 1;
+  background-repeat: repeat-x;
+  -webkit-animation: animatedBackground 40s linear infinite;
+  animation: animatedBackground 40s linear infinite;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+page-registration ion-card.card {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+page-registration a, page-registration p,
+page-registration ion-card-header.card-header {
+  color: #fff !important;
+}
+
+page-registration .list > .item-block:first-child {
+  border: medium none;
+}
+
+page-registration .item {
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: medium none;
+}
+
+page-registration .item .text-input {
+  color: #fff;
+}
+
+page-registration .item input::-moz-placeholder {
+  color: #fff !important;
+}
+
+page-registration .item input:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-registration .item *::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+page-registration .item *:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+page-registration .item *:-moz-placeholder {
+  color: #fff !important;
+}
+
+page-registration .c {
+  color: white;
+}
+
+page-registration .regs {
+  color: wheat;
+  background-color: rgba(160, 3, 3, 0.4);
+  border: none;
+}
+
+page-registration #err {
+  color: orange;
+  margin-top: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+page-registration .bottom {
+  color: coral;
 }

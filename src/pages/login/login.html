@@ -1,0 +1,35 @@
+<!--splash screen code-->
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+     <img src="assets/logobb.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+<!--splash screen end-->
+
+<ion-content class="splash-bg" text-center no-bounce>
+	
+  	<ion-card text-center class="sc">
+		<ion-card-header>
+			Login Form
+		</ion-card-header>
+		<ion-card-content>
+			<ion-list no-line>
+				<ion-item>
+					<ion-input  [(ngModel)]="data.username" name="username" type="text" placeholder="Username" ng-required="true"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input  [(ngModel)]="data.password" name="password" type="password" placeholder="Password" ng-required="true"></ion-input>
+				</ion-item>
+				<button ion-button block outline color="light" (click)="login()">Log in</button>
+				<div id="error" class="er"></div>
+			</ion-list>
+		</ion-card-content>
+		<button ion-button clear full class="reg" (click)="Register()">Don't have an account? Sign up</button>
+
+	</ion-card>
+	
+</ion-content>
+
+
