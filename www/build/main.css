@@ -29811,12 +29811,15 @@ ion-navbar.toolbar {
   color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 20px;
-  width: 25px;
+  border-radius: 15px;
+  width: 45px;
+  height: 50px;
+  font-size: 20px;
 }
 
 #myBtn:hover:active {
-  background-color: #555;
+  background-color: coral;
+  color: #B40404;
 }
 
 page-home .btnSearch {
