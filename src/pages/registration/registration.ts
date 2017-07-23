@@ -32,6 +32,11 @@ export class RegistrationPage {
        {id: 8, name: "AB+"},
        {id: 9, name: "AB-"}
      ];
+      blood_donation = [
+       {id: 1, name: "Yes"},
+       {id: 2, name: "No"},
+       {id: 3, name: "Decide later"}
+     ];
       location = [
        {id: 1, name: "Dhaka"},
        {id: 2, name: "Chittagong"},
@@ -43,23 +48,29 @@ export class RegistrationPage {
        {id: 1, name: "Male"},
        {id: 2, name: "Female"}
      ];
-
+donate:boolean;
+d:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,private viewCtrl: ViewController,public service:DataServicesProvider) {
     this.data = {};
     this.data.username = "";
+    this.data.realname="";
     this.data.age = "";
     this.data.gender="";
     this.data.bloodgroup="";
-    this.data.phone="";
     this.data.location="";
+    this.data.phone="";
     this.data.email="";
     this.data.password = "";
+    this.data.lastdate="";
     this.result="";
   }
-  
+   clicked(){
+     this.donate=!this.donate;
+   }
   register()
   {
     let username = this.data.username;
+    let realname=this.data.realname;
     let age=this.data.age;
     let gender = this.data.gender;
     let bloodgroup = this.data.bloodgroup;
@@ -67,18 +78,19 @@ export class RegistrationPage {
     let location = this.data.location;
     let email = this.data.email;
     let password = this.data.password;
+    let lastdate=this.data.lastdate;
    // let pass=Md5.hashStr(password);
-    //console.log(pass);
-    if($.trim(username).length>0 && $.trim(age).length && $.trim(gender).length>0  &&
+    if($.trim(username).length>0 && $.trim(realname).length>0 && $.trim(age).length && $.trim(gender).length>0  &&
     $.trim(bloodgroup).length>0&&$.trim(phone).length>0&& $.trim(location).length>0 &&
     $.trim(email).length>0 && $.trim(password).length>0){
-    let data = JSON.stringify({username,age,gender,bloodgroup,phone,location,email,password});
+    let data = JSON.stringify({username,realname,age,gender,bloodgroup,phone,location,email,password,lastdate});
+    console.log(data);
     this.service.postRegister(data).subscribe(data => {
     console.log(data);
     this.data=data.json();
     this.result=this.data[0].token;
     console.log(this.result);
-    if(this.result!="Invalid"){
+    if(this.result!="null"){
     this.navCtrl.push(LoginPage);
     }
    else{
@@ -96,7 +108,8 @@ export class RegistrationPage {
     }
 
   }
-
+ 
+    
    dismiss(){
     this.viewCtrl.dismiss();
   }
