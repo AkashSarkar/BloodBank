@@ -90,7 +90,11 @@ d:any;
     this.data=data.json();
     this.result=this.data[0].token;
     console.log(this.result);
-    if(this.result!="null"){
+     if(this.result!="Invalid"){
+    
+       $('#err').html("<span class='text-danger'>Check All The fields</span>");
+    }
+   else if(this.result!="null"){
     this.navCtrl.push(LoginPage);
     }
    else{
