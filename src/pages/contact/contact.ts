@@ -17,11 +17,10 @@ export class ContactPage {
       this.Data.load().subscribe(data =>{
         this.items=data;
 
-        for (let i = 0; i < 5; i++) 
+        for (let i = 0; i < 2; i++) 
         {
           this.listitem.push( this.items[i] );   
         }
-        console.log(data);
       }); 
     }
 
