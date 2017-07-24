@@ -11,10 +11,6 @@
   font-weight: 600;
 }
 
-.tab-disabled ion-icon {
-  color: orange;
-}
-
 .ion-ios-add:before {
   content: "\f102";
 }
