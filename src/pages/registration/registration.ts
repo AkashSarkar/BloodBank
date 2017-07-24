@@ -80,7 +80,7 @@ d:any;
     let password = this.data.password;
     let lastdate=this.data.lastdate;
    // let pass=Md5.hashStr(password);
-    if($.trim(username).length>0 && $.trim(realname).length>0 && $.trim(age).length && $.trim(gender).length>0  &&
+    if($.trim(username).length>0 && $.trim(realname).length>0 && $.trim(age).length>0 && $.trim(gender).length>0  &&
     $.trim(bloodgroup).length>0&&$.trim(phone).length>0&& $.trim(location).length>0 &&
     $.trim(email).length>0 && $.trim(password).length>0){
     let data = JSON.stringify({username,realname,age,gender,bloodgroup,phone,location,email,password,lastdate});
@@ -90,9 +90,9 @@ d:any;
     this.data=data.json();
     this.result=this.data[0].token;
     console.log(this.result);
-     if(this.result!="Invalid"){
+     if(this.result=="Invalid"){
     
-       $('#err').html("<span class='text-danger'>Check All The fields</span>");
+       $('#err').html("<span class='text-danger'>Correctly fill up fild</span>");
     }
    else if(this.result!="null"){
     this.navCtrl.push(LoginPage);
