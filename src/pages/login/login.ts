@@ -4,6 +4,7 @@ import { DataServicesProvider } from '../../providers/data-services/data-service
 import * as $ from 'jquery'
 import { TabsPage } from '../tabs/tabs';
 import { RegistrationPage } from '../registration/registration';
+import { LoadingController } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -17,10 +18,11 @@ export class LoginPage {
    data:any;
    item:any;
    result:any;
+   loader:any;
 
   constructor(public navCtrl: NavController, 
   public navParams: NavParams,private viewCtrl: ViewController,
-  public service:DataServicesProvider) {
+  public service:DataServicesProvider,public loadingCtrl:LoadingController) {
     
     this.data = {};
     this.data.username = "";
@@ -38,6 +40,7 @@ export class LoginPage {
 
 
    login() {
+    this.presentLoading();
     let username = this.data.username;
     let password = this.data.password;
     if($.trim(username).length>0 && $.trim(password).length>0){
@@ -63,8 +66,15 @@ export class LoginPage {
     else{
        $('#error').html("<strong class='text-danger'>Username or Password can't be empty</strong>");
     }
-   
 
+    this.loader.dismiss();
+   
+  }
+    presentLoading() {
+    this.loader = this.loadingCtrl.create({
+      content: "Authenticating..."
+    });
+    this.loader.present();
   }
 
   dismiss(){
