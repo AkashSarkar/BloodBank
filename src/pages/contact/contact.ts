@@ -21,6 +21,7 @@ export class ContactPage {
         {
           this.listitem.push( this.items[i] );   
         }
+        console.log(data);
       }); 
     }
 
