@@ -1,9 +1,18 @@
 .tabs-md .tab-button {
   color: darkgray !important;
+  font-weight: 500;
+  font-size: 40px;
 }
 
 .tabs-md .tab-button[aria-selected=true] {
-  color: yellow !important;
+  color: coral !important;
+  border-top: 2px solid   coral;
+  transition: all 0.5s ease-in-out;
+  font-weight: 600;
+}
+
+.tab-disabled ion-icon {
+  color: orange;
 }
 
 .ion-ios-add:before {
