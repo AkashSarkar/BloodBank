@@ -30249,14 +30249,25 @@ page-login .custom-login-label i {
 }
 
 .ava {
-  background-color: rgba(169, 0, 0, 0.6);
+  background-image: linear-gradient(rgba(97, 11, 11, 0.7), rgba(97, 11, 11, 0.7)), url("../assets/blood.jpg");
   color: white;
   font-size: 20px;
 }
 
+.ava h1 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.ava h2 {
+  color: coral;
+  font-weight: 500;
+  font-size: 18px;
+}
+
 .ava p {
   color: yellowgreen;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .listColor ion-item {

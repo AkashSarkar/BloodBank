@@ -14,9 +14,7 @@ import { Storage } from '@ionic/storage';
 export class ProfilePage {
   userdetails:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public app:App,public storage:Storage) {
-  let that=this;
-  that.storage.get('profile').then((data)=>{
-  
+  this.storage.get('profile').then((data)=>{
   this.userdetails=data;
   console.log("user");
   console.log(this.userdetails);

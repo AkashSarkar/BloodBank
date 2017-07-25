@@ -15,8 +15,9 @@
              <img src="assets/profile.jpg">
           </ion-avatar>
        
-               <!-- <h2>{{userdetails.name}}</h2>
-                <p>Last Date of donation : {{userdetails.lastdate}} .</p>-->
+                <h1 *ngFor="let x of userdetails">{{x.name}}</h1>
+                <h2 *ngFor="let x of userdetails">Phone : {{x.phone}}.</h2>
+                <p *ngFor="let x of userdetails">Last Date of donation : {{x.lastdate}} .</p>
           
             
         </ion-item>
@@ -37,7 +38,7 @@
                 <ion-item no-lines (click)="logout()">
                   <ion-icon name="log-out" item-left></ion-icon>
 
-                 <ion-icon name="arrow-dropright" md="md-arrow-dropright"  item-right></ion-icon>
+                 
                    Log Out
                 </ion-item>
                   
