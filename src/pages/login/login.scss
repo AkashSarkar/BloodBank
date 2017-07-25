@@ -14,14 +14,17 @@ page-login {
     to { background-position: 100% 0; }
   }
 
-	
+#bu
+{
+	background-color: rgba(93, 5, 5   , 0.8);
+}	
 
 .sc {
 		align-content: center;
         //display: flex;
 		//flex-direction: column;
 		justify-content: center;
-		margin-top: 35%;
+		margin-top: 32%;
 		text-align: center;
 		position: fixed;
 	}
@@ -31,6 +34,11 @@ page-login {
 		background: rgba(0, 0, 0, 0.6);
 		border-radius: 5px;
 		justify-content: center;
+	}
+	.sc ion-card-header
+	{
+		font-weight: bold;
+		font-size:23px;
 	}
 
 	a, p,

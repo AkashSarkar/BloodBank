@@ -30144,6 +30144,10 @@ page-login .splash-bg {
   }
 }
 
+page-login #bu {
+  background-color: rgba(93, 5, 5, 0.8);
+}
+
 page-login .sc {
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -30151,7 +30155,7 @@ page-login .sc {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 35%;
+  margin-top: 32%;
   text-align: center;
   position: fixed;
 }
@@ -30163,6 +30167,11 @@ page-login ion-card.card {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+page-login .sc ion-card-header {
+  font-weight: bold;
+  font-size: 23px;
 }
 
 page-login a, page-login p,

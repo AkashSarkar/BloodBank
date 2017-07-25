@@ -12,7 +12,7 @@
 	
   	<ion-card text-center class="sc">
 		<ion-card-header>
-			Login Form
+			Login
 		</ion-card-header>
 		<ion-card-content>
 			<ion-list no-line>
@@ -25,7 +25,7 @@
 					<ion-label floating>Password</ion-label>
 					<ion-input  [(ngModel)]="userinfo.password" name="password" type="password" ng-required="true"></ion-input>
 				</ion-item>
-				<button ion-button block outline color="light" (click)="login()">Log in</button>
+				<button id="bu"ion-button block  (click)="login()">Log in</button>
 				<div id="error" class="er"></div>
 			</ion-list>
 		</ion-card-content>
