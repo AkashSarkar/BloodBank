@@ -6,28 +6,28 @@
 		<ion-card-content>
 			<ion-list no-line>
 				<ion-item>
-					<ion-input  [(ngModel)]="data.username" name="username" type="text" placeholder="Username" ng-required="true"></ion-input>
+					<ion-input  [(ngModel)]="userinfo.username" name="username" type="text" placeholder="Username" required></ion-input>
 				</ion-item>
 
 				<ion-item>
-					<ion-input  [(ngModel)]="data.realname" name="realname" type="text" placeholder="Name" ng-required="true"></ion-input>
+					<ion-input  [(ngModel)]="userinfo.realname" name="realname" type="text" placeholder="Name" required></ion-input>
 				</ion-item>
 				
                 <ion-item>
 					<ion-label color="light">Birthday</ion-label>
-					<ion-input [(ngModel)]="data.age" name="age" type="date" ng-required="true"></ion-input>
+					<ion-input [(ngModel)]="userinfo.age" name="age" type="date" required></ion-input>
 				</ion-item>
 
 				<ion-item>
                   <ion-label color="light">Gender</ion-label>
-                    <ion-select [(ngModel)]="data.gender" ng-required="true">
+                    <ion-select [(ngModel)]="userinfo.gender" required>
                        <ion-option *ngFor="let g of gender" value="{{g.name}}">{{g.name}}</ion-option>
                     </ion-select>
 				</ion-item>
 
                 <ion-item>
                  <ion-label color="light">Enter bloodgroup</ion-label>
-                    <ion-select [(ngModel)]="data.bloodgroup" ng-required="true">
+                    <ion-select [(ngModel)]="userinfo.bloodgroup"required>
                         <ion-option *ngFor="let b of blood" value="{{b.name}}">{{b.name}}</ion-option>
                     </ion-select>
 				</ion-item>
@@ -35,21 +35,21 @@
 
 				 <ion-item>
                   <ion-label color="light">Enter location</ion-label>
-                     <ion-select [(ngModel)]="data.location" type="text" ng-required="true">
+                     <ion-select [(ngModel)]="userinfo.location" type="text" required>
                        <ion-option *ngFor="let l of location" value="{{l.name}}">{{l.name}}</ion-option>
                     </ion-select>
 				</ion-item>
 
 				<ion-item>
-					<ion-input numbers-only  [(ngModel)]="data.phone" name="phone" type="text" placeholder="Phone no." ng-required="true"></ion-input>
+					<ion-input numbers-only  [(ngModel)]="userinfo.phone" name="phone" type="text" placeholder="Phone no." required="true"></ion-input>
 				</ion-item>
  
                 <ion-item>
-					<ion-input  [(ngModel)]="data.email" name="email" type="email" placeholder="Email" ng-required="true"></ion-input>
+					<ion-input  [(ngModel)]="userinfo.email" name="email" type="email" placeholder="Email"  required></ion-input>
 				</ion-item>
 
                 <ion-item>
-					<ion-input [(ngModel)]="data.password" name="password" type="password" placeholder="Password" ng-required="true"></ion-input>
+					<ion-input [(ngModel)]="userinfo.password" name="password" type="password" placeholder="Password" required="true"></ion-input>
 				</ion-item>
                 
 				<ion-item>
@@ -58,7 +58,7 @@
 				</ion-item>
 				<ion-item  *ngIf="donate" >
 					<ion-label>LastDateOfDonation</ion-label>
-					<ion-input  [(ngModel)]="data.lastdate" name="LastDateOfDonation" type="date"></ion-input>
+					<ion-input  [(ngModel)]="userinfo.lastdate" name="LastDateOfDonation" type="date"></ion-input>
 				</ion-item>
 
 				<button class="regs" ion-button block outline  (click)="register()">Register</button>

@@ -26,13 +26,17 @@ export class DataServicesProvider {
 
   postLogin(data){
    let link = "https://uiubloodbank.ml/API/login.php";
-   return this.http.post(link,data);
+   return this.http.post(link,data)
+   .map(res =>res.json());
   }
   postRegister(data){
     let link = "https://uiubloodbank.ml/API/Register.php";
-      return this.http.post(link,data);    
+      return this.http.post(link,data)
+      .map(res =>res.json());   
   }
 
+    
+ 
     
 
 }

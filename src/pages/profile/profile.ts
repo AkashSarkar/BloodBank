@@ -1,15 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,App } from 'ionic-angular';
 import {NotificationPage} from '../notification/notification';
 import {ForumPage} from '../forum/forum';
 import {ManageAccountPage} from '../manage-account/manage-account';
 import {FeedPage} from '../feed/feed';
-
-
-
-
-
-
+import { Storage } from '@ionic/storage';
 @IonicPage()
 @Component({
   selector: 'page-profile',
@@ -17,9 +12,17 @@ import {FeedPage} from '../feed/feed';
   
 })
 export class ProfilePage {
-
- constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  userdetails:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams,public app:App,public storage:Storage) {
+  let that=this;
+  that.storage.get('profile').then((data)=>{
+  
+  this.userdetails=data;
+  console.log("user");
+  console.log(this.userdetails);
+  });
+}
+  
   _notification(){
     this.navCtrl.push(NotificationPage);
   }
@@ -41,6 +44,11 @@ export class ProfilePage {
     console.log('ionViewDidLoad Profile');
   }
    
-
+ logout()
+ {
+  //this.navCtrl.push(LoginPage);
+  const root=this.app.getRootNav();
+  root.popToRoot();
+ }
 
 }

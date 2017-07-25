@@ -15,8 +15,8 @@
              <img src="assets/profile.jpg">
           </ion-avatar>
        
-                <h2>Deepita Saha</h2>
-                <p>Last Date of donation : 28/8/16 .</p>
+               <!-- <h2>{{userdetails.name}}</h2>
+                <p>Last Date of donation : {{userdetails.lastdate}} .</p>-->
           
             
         </ion-item>
@@ -24,17 +24,6 @@
         <div class="ion-list-inset" no-lines>
    
               <div class="item item-icon-right" class="listColor" no-lines>
-                <ion-item  no-lines (click)="_notification()">
-                   <ion-icon name="notifications" item-left></ion-icon>
-                   <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>
-                   Notification
-                </ion-item>
-                <ion-item no-lines (click)="_forum()">
-                   <ion-icon name="logo-buffer" item-left></ion-icon>
-                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>
-                   Forum
-                </ion-item>
-                
                 <ion-item no-lines (click)="_manage()">
                 <ion-icon name="settings"  item-left></ion-icon>
                  <ion-icon name="arrow-dropright" md="md-arrow-dropright"item-right></ion-icon>
@@ -45,10 +34,10 @@
                  <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>
                    Help & Feedback
                 </ion-item>
-                <ion-item no-lines>
+                <ion-item no-lines (click)="logout()">
                   <ion-icon name="log-out" item-left></ion-icon>
 
-                 <ion-icon name="arrow-dropright" md="md-arrow-dropright" item-right></ion-icon>
+                 <ion-icon name="arrow-dropright" md="md-arrow-dropright"  item-right></ion-icon>
                    Log Out
                 </ion-item>
                   

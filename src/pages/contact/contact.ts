@@ -46,7 +46,14 @@ export class ContactPage {
     doRefresh(refresher) {
       console.log('Begin async operation', refresher);
         this.Data.load().subscribe(data =>{
-        this.listitem=data;
+         this.items=data;
+         this.j=5;
+         this.listitem=[];
+
+        for (let i = 0; i < 5 && i<this.items.length; i++) 
+        {
+          this.listitem.push( this.items[i] );   
+        }
         refresher.complete();
       });
       setTimeout(() => {

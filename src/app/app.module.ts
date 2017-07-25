@@ -20,6 +20,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SearchBloodPage } from '../pages/search-blood/search-blood';
 import { HttpModule } from '@angular/http';
 import { DataServicesProvider } from '../providers/data-services/data-services';
+
+import { IonicStorageModule } from '@ionic/storage';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -40,6 +43,7 @@ import { DataServicesProvider } from '../providers/data-services/data-services';
   imports: [
     BrowserModule,
     HttpModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp,
     {
         platforms : {

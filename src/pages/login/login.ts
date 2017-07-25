@@ -5,6 +5,7 @@ import * as $ from 'jquery'
 import { TabsPage } from '../tabs/tabs';
 import { RegistrationPage } from '../registration/registration';
 import { LoadingController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -15,20 +16,18 @@ export class LoginPage {
   tabBarElement:any;
 
 
-   data:any;
-   item:any;
-   result:any;
+   
+   
    loader:any;
-
+   responsedata:any;
+   result:any;
+   userdata:any;
+   userinfo={"username":"","password":""};
+ 
   constructor(public navCtrl: NavController, 
   public navParams: NavParams,private viewCtrl: ViewController,
-  public service:DataServicesProvider,public loadingCtrl:LoadingController) {
-    
-    this.data = {};
-    this.data.username = "";
-    this.data.password = "";
-    this.data.response = '';
-    this.result="";
+  public service:DataServicesProvider,public loadingCtrl:LoadingController,public storage:Storage) {
+   
   }
     ionViewDidLoad(){
     setTimeout(()=>{
@@ -37,18 +36,15 @@ export class LoginPage {
   }
 
 
-
-
    login() {
     this.presentLoading();
-    let username = this.data.username;
-    let password = this.data.password;
-    if($.trim(username).length>0 && $.trim(password).length>0){
-    let data = JSON.stringify({username, password});
-    this.service.postLogin(data).subscribe(data => {
-    this.data=data.json();
-    this.result=this.data[0].token;
-    console.log(this.result);
+    if($.trim(this.userinfo.username).length>0 && $.trim(this.userinfo.password).length>0){
+    this.service.postLogin(this.userinfo).subscribe(data => {
+    this.responsedata=data;
+    this.result=data[0].token;
+    this.storage.set('profile',data);
+    //console.log(this.responsedata);
+    //console.log(this.userdata);
     if(this.result!="Invalid"){
       this.navCtrl.push(TabsPage,{
         val:this.result
@@ -70,9 +66,10 @@ export class LoginPage {
     this.loader.dismiss();
    
   }
+
     presentLoading() {
     this.loader = this.loadingCtrl.create({
-      content: "Authenticating..."
+      content: "Loging in ..."
     });
     this.loader.present();
   }
@@ -86,6 +83,6 @@ export class LoginPage {
     this.navCtrl.push(RegistrationPage);
   }
 
- 
+
 
 }

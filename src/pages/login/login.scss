@@ -21,7 +21,7 @@ page-login {
         //display: flex;
 		//flex-direction: column;
 		justify-content: center;
-		margin-top: 40%;
+		margin-top: 35%;
 		text-align: center;
 		position: fixed;
 	}
@@ -43,7 +43,7 @@ page-login {
 	}
 
 	.item {
-		margin-bottom: 10px;
+		margin-bottom: 8px;
 		background: rgba(255, 255, 255, 0.6);
 		border: medium none;
 
@@ -88,6 +88,38 @@ page-login {
 		//padding: 2px;
 		//font-size: 6px;
 	}
+	.user1,.user
+	{
+	 background-color: rgba(141, 151, 161, .3);
+	// border-bottom: 1px solid coral;
+	// background-color: rgba(0, 0, 0, 0);
+	 color: white;
+
+	
+	}
+	.user ion-label
+	{ 
+		font-weight: bold;
+		color:orange;
+		//font-size: 15px;
+		
+	}
+	.user ion-label:active
+	{
+		color:orange;
+		
+
+	}
+	
+
+.custom-login-label input[type]{
+    margin-left: 20px;
+}
+.custom-login-label i {
+    position: absolute;
+    bottom: 12px;
+}	
+	
 }
 
 
