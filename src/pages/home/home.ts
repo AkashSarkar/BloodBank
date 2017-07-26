@@ -9,15 +9,13 @@ import { DataServicesProvider } from '../../providers/data-services/data-service
   
 })
 export class HomePage {
- // splash=true;
- // tabBarElement:any;
+ 
   hospital:any;
   
   constructor(public navCtrl: NavController,private Data:DataServicesProvider) {
      this.Data.hospitals().subscribe(data =>{
       this.hospital=data;
     });
-    //this.tabBarElement=document.querySelector('.tabbar');
   }
 
   sBlood() {
@@ -25,13 +23,7 @@ export class HomePage {
   }
 
   ionViewDidLoad(){
-    /*this.tabBarElement.style.display='none';
-
-    setTimeout(()=>{
-      this.splash=false;
-      this.tabBarElement.style.display='flex';
-    },3500);   //3500ms
-  }*/
+   
 
 }
 }

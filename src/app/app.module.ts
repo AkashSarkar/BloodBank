@@ -15,6 +15,7 @@ import {ManageAccountPage} from '../pages/manage-account/manage-account';
 import {ForumPage} from '../pages/forum/forum';
 import {FeedPage} from '../pages/feed/feed';
 
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SearchBloodPage } from '../pages/search-blood/search-blood';
@@ -37,7 +38,8 @@ import { IonicStorageModule } from '@ionic/storage';
     ForumPage,
     LoginPage,
     RegistrationPage,
-    SearchBloodPage
+    SearchBloodPage,
+    
 
   ],
   imports: [
@@ -73,7 +75,8 @@ import { IonicStorageModule } from '@ionic/storage';
     ForumPage,
     LoginPage,
     RegistrationPage,
-    SearchBloodPage
+    SearchBloodPage,
+    
   ],
   providers: [
     StatusBar,

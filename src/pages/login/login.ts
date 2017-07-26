@@ -12,12 +12,8 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  splash=true;
-  tabBarElement:any;
-
-
-   
-   
+   splash=true;
+   tabBarElement:any;
    loader:any;
    responsedata:any;
    result:any;
