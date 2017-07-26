@@ -20,7 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SearchBloodPage } from '../pages/search-blood/search-blood';
 import { HttpModule } from '@angular/http';
 import { DataServicesProvider } from '../providers/data-services/data-services';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
@@ -43,6 +43,7 @@ import { IonicStorageModule } from '@ionic/storage';
   imports: [
     BrowserModule,
     HttpModule,
+    ReactiveFormsModule,
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp,
     {

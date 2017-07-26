@@ -1,69 +1,119 @@
 <ion-content class="background">
 	<ion-card>
 		<ion-card-header>
-			Register Form
+			<p *ngIf="submitAttempt">Registration From</p>
 		</ion-card-header>
 		<ion-card-content>
 			<ion-list no-line>
-				<ion-item>
-					<ion-input  [(ngModel)]="userinfo.username" name="username" type="text" placeholder="Username" required></ion-input>
-				</ion-item>
+				<form [formGroup]="rForm">
+					<ion-item>
+           				 <ion-label floating>Username</ion-label>
+           				 <ion-input formControlName="username" type="text"></ion-input>
+					</ion-item>
+					
+					<div *ngIf="!rForm.controls.username.valid  && (rForm.controls.username.touched || submitAttempt)">
+                		<p>Please enter a valid Username.</p>
+         			</div>
+					
+					<ion-item>
+						<ion-label floating>Realname</ion-label>
+						<ion-input  formControlName="realname" type="text"></ion-input>
+					</ion-item>
+					<div *ngIf="!rForm.controls.realname.valid  && (rForm.controls.realname.touched || submitAttempt)">
+                		<p>Please enter a valid name.</p>
+         			</div>
 
-				<ion-item>
-					<ion-input  [(ngModel)]="userinfo.realname" name="realname" type="text" placeholder="Name" required></ion-input>
-				</ion-item>
-				
-                <ion-item>
-					<ion-label color="light">Birthday</ion-label>
-					<ion-input [(ngModel)]="userinfo.age" name="age" type="date" required></ion-input>
-				</ion-item>
+					<ion-item>
+						<ion-label floating>Date of Birth</ion-label>
+						<ion-input formControlName="age" type="date"></ion-input>
+					</ion-item>
+					<div *ngIf="!rForm.controls.age.valid  && (rForm.controls.age.touched || submitAttempt)">
+                		<p>This field can't be empty.</p>
+         			</div>
 
-				<ion-item>
-                  <ion-label color="light">Gender</ion-label>
-                    <ion-select [(ngModel)]="userinfo.gender" required>
-                       <ion-option *ngFor="let g of gender" value="{{g.name}}">{{g.name}}</ion-option>
-                    </ion-select>
-				</ion-item>
+					<ion-item>
+                  		<ion-label floating>Gender</ion-label>
+                    	<ion-select formControlName="gender" >
+							<ion-option value="male" >Male</ion-option>
+							<ion-option value="female" >Female</ion-option>
+                    	</ion-select>
+					</ion-item>
+					<div *ngIf="!rForm.controls.gender.valid  && (rForm.controls.gender.touched || submitAttempt)">
+                		<p>This field can't be empty.</p>
+         			</div>
 
-                <ion-item>
-                 <ion-label color="light">Enter bloodgroup</ion-label>
-                    <ion-select [(ngModel)]="userinfo.bloodgroup"required>
-                        <ion-option *ngFor="let b of blood" value="{{b.name}}">{{b.name}}</ion-option>
-                    </ion-select>
-				</ion-item>
+					<ion-item>
+                 		<ion-label floating>Enter BloodGroup</ion-label>
+                    	<ion-select formControlName="bloodgroup" >
+							<ion-option value="A+">A+</ion-option>
+							<ion-option value="A-">A-</ion-option>
+							<ion-option value="B+">B+</ion-option>
+							<ion-option value="0+">O+</ion-option>
+							<ion-option value="O-">O+</ion-option>
+							<ion-option value="AB+">AB+</ion-option>
+							<ion-option value="AB-">AB-</ion-option>
+                   		</ion-select>
+					</ion-item>
+					<div *ngIf="!rForm.controls.bloodgroup.valid  && (rForm.controls.bloodgroup.touched || submitAttempt)">
+                		<p>This field can't be empty.</p>
+         			</div>
 
+					<ion-item>
+                 	 	<ion-label floating>Enter Location</ion-label>
+                     	<ion-select formControlName="location" type="text" required>
+					      <ion-option value="Dhaka" >Dhaka</ion-option>
+					      <ion-option value="Chittagong" >Chittagong</ion-option>
+					   	  <ion-option value="Sylhet" >Sylhet</ion-option>
+						  <ion-option value="Rajshahi" >Rajshahi</ion-option>
+						  <ion-option value="Rangpur" >Rangpur</ion-option>
+						  <ion-option value="Barisal" >Barisal</ion-option>
+						  <ion-option value="Khulna" >Khulna</ion-option>
+						  <ion-option value="Mymenshingh" >Mymenshingh</ion-option>
+                   		</ion-select>
+					</ion-item>
+					<div *ngIf="!rForm.controls.location.valid  && (rForm.controls.location.touched || submitAttempt)">
+                		<p>This field can't be empty.</p>
+         			</div>
 
-				 <ion-item>
-                  <ion-label color="light">Enter location</ion-label>
-                     <ion-select [(ngModel)]="userinfo.location" type="text" required>
-                       <ion-option *ngFor="let l of location" value="{{l.name}}">{{l.name}}</ion-option>
-                    </ion-select>
-				</ion-item>
+					<ion-item>
+						<ion-label floating>Enter Phone</ion-label>
+						<ion-input numbers-only formControlName="phone" type="text"></ion-input>
+					</ion-item>
+					<div *ngIf="!rForm.controls.phone.valid  && (rForm.controls.phone.touched || submitAttempt)">
+                		<p>Please enter a valid phone number.</p>
+         			</div>
 
-				<ion-item>
-					<ion-input numbers-only  [(ngModel)]="userinfo.phone" name="phone" type="text" placeholder="Phone no." required="true"></ion-input>
-				</ion-item>
- 
-                <ion-item>
-					<ion-input  [(ngModel)]="userinfo.email" name="email" type="email" placeholder="Email"  required></ion-input>
-				</ion-item>
+					<ion-item>
+						<ion-label floating>Enter Email</ion-label>
+						<ion-input  formControlName="email" type="email"></ion-input>
+					</ion-item>
+					<div *ngIf="!rForm.controls.email.valid  && (rForm.controls.email.touched || submitAttempt)">
+                		<p>Please enter a valid email.</p>
+         			</div>
 
-                <ion-item>
-					<ion-input [(ngModel)]="userinfo.password" name="password" type="password" placeholder="Password" required="true"></ion-input>
-				</ion-item>
-                
-				<ion-item>
-					<ion-label>Want To Donate Blood?</ion-label>
-					<ion-checkbox item-end (click)="clicked()"></ion-checkbox>	
-				</ion-item>
-				<ion-item  *ngIf="donate" >
-					<ion-label>LastDateOfDonation</ion-label>
-					<ion-input  [(ngModel)]="userinfo.lastdate" name="LastDateOfDonation" type="date"></ion-input>
-				</ion-item>
+					<ion-item>
+						<ion-label floating>Password</ion-label>
+						<ion-input  formControlName="password" type="password" ></ion-input>
+					</ion-item>
+					<div *ngIf="!rForm.controls.password.valid  && (rForm.controls.password.touched || submitAttempt)">
+                		<p>Password is not strong.</p>
+         			</div>
 
-				<button class="regs" ion-button block outline  (click)="register()">Register</button>
-				<div id="err"></div>	
+					<ion-item>
+						<ion-label>Want To Donate Blood?</ion-label>
+						<ion-checkbox item-end (click)="clicked()"></ion-checkbox>	
+					</ion-item>
+
+					<ion-item  *ngIf="donate" >
+						<ion-label>LastDateOfDonation</ion-label>
+						<ion-input  formControlName="lastdate" type="date"></ion-input>
+					</ion-item>
+					
+					
+				</form>
+
 			</ion-list>
+				<button class="regs" ion-button block outline [disabled]="!rForm.valid"  (click)="register()">Register</button>
 		</ion-card-content>
 	<button ion-button clear full color="light" (click)="login()" class="bottom">Already have an account? Sign in</button>
 	</ion-card>
