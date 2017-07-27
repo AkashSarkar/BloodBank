@@ -1,0 +1,33 @@
+<ion-header>
+
+<ion-navbar no-shadow color="danger">
+  <ion-title>Add Review</ion-title>
+ </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+
+ 
+  <ion-list no-lines>
+ 
+    <ion-item>
+      <ion-label floating>Title</ion-label>
+      <ion-input [(ngModel)]="data1.title" type="text" class="titletext"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>Review</ion-label>
+      <ion-textarea [(ngModel)]="data1.description" class="des"></ion-textarea>
+    </ion-item>
+ 
+    <ion-rating [leitura]="false" (ionclick)="log($event)">
+           
+         </ion-rating>
+ 
+  </ion-list>
+ 
+  <button ion-button full color="danger" (click)="review()" >Save button</button>
+ 
+
+  
+</ion-content>

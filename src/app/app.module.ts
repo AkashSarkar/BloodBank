@@ -23,6 +23,8 @@ import { HttpModule } from '@angular/http';
 import { DataServicesProvider } from '../providers/data-services/data-services';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicStorageModule } from '@ionic/storage';
+import { IonRatingComponent } from '../components/ion-rating/ion-rating';
+import { AddReviewPage } from '../pages/add-review/add-review';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { IonicStorageModule } from '@ionic/storage';
     LoginPage,
     RegistrationPage,
     SearchBloodPage,
+    IonRatingComponent,
+    AddReviewPage
     
 
   ],
@@ -76,6 +80,7 @@ import { IonicStorageModule } from '@ionic/storage';
     LoginPage,
     RegistrationPage,
     SearchBloodPage,
+    AddReviewPage
     
   ],
   providers: [

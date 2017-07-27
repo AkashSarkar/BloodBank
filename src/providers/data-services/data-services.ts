@@ -4,8 +4,11 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DataServicesProvider {
+  name:string="";
 
     constructor(private http:Http) {
+
+      
       
     }
     
@@ -34,6 +37,20 @@ export class DataServicesProvider {
       return this.http.post(link,data)
       .map(res =>res.json());   
   }
+  
+  
+postReview(data){
+    let link = "https://uiubloodbank.ml/API/setFeedBack.php";
+      return this.http.post(link,data);    
+  }
+
+getReview(){
+    
+      return this.http.get('https://www.uiubloodbank.ml/API/getFeedback.php')
+      .map(res =>res.json()) 
+  }
+    
+ 
 
     
  
