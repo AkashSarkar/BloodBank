@@ -12,8 +12,12 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-   splash=true;
-   tabBarElement:any;
+  splash=true;
+  tabBarElement:any;
+
+
+   
+   
    loader:any;
    responsedata:any;
    result:any;
@@ -38,6 +42,8 @@ export class LoginPage {
     this.service.postLogin(this.userinfo).subscribe(data => {
     this.responsedata=data;
     this.result=data[0].token;
+   // this.val=result[0].token;
+    this.service.name=this.result;
     this.storage.set('profile',data);
     //console.log(this.responsedata);
     //console.log(this.userdata);
