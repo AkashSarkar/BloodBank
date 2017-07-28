@@ -39,16 +39,26 @@
 .feed p
 {
   color: coral;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 15px;
 
 }
 
 .feed h2
 {
-  font-weight: 800;
+  font-weight: 1000;
+  font-size: 20px;
+  
 }
 
 .feed h3
+{
+  font-weight: 500;
+  color:yellowgreen;
+  font-size: 13px;
+}
+
+.feed h4
 {
   vertical-align: middle;
   font-weight: 600;
