@@ -28,16 +28,17 @@
       refreshingText="Refreshing...">
       </ion-refresher-content>
   </ion-refresher>
+
   <ion-list   class="d">
-    <ion-item *ngFor="let item of listitem"  class="feed">
+    <ion-item *ngFor="let item of listitem"  class="feed" text-wrap>
      
           <ion-avatar item-start>
        
             
           </ion-avatar>
          <h2>{{ item.username }}</h2>
-         <h3>Title : {{ item.title }}</h3>
-         <h4>Description : {{ item.description }}</h4>
+         <p >Title : {{ item.title }}</p>
+         <h3>{{ item.description }}</h3>
 
 
 <ion-grid>
@@ -94,6 +95,7 @@
     
  
   </ion-list>
+    
 
 <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
    <ion-infinite-scroll-content>
