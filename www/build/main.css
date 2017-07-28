@@ -29775,9 +29775,9 @@ ion-rating {
 }
 
 .feed ion-avatar {
-  background-image: url("../assets/list.png");
+  background-image: url("../assets/ff.jpg");
   background-size: cover;
-  height: 55px;
+  height: 60px;
   width: 40px;
   text-align: center;
   padding-top: 17px;
@@ -29793,16 +29793,32 @@ ion-rating {
   color: greenyellow;
 }
 
+.feed p {
+  color: coral;
+  font-weight: 600;
+  font-size: 15px;
+}
+
 .feed h2 {
-  font-weight: 800;
+  font-weight: 1000;
+  font-size: 20px;
 }
 
 .feed h3 {
-  font-weight: 600;
+  font-weight: 500;
+  color: yellowgreen;
+  font-size: 13px;
 }
 
-.feed h3 {
+.feed h4 {
+  vertical-align: middle;
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#text {
+  text-overflow: ellipsis;
 }
 
 .titletext {
