@@ -16,9 +16,9 @@
 
 .feed ion-avatar
 {
-     background-image: url('../assets/list.png');
+     background-image: url('../assets/ff.jpg');
      background-size:cover;
-     height: 55px;
+     height: 60px;
      width: 40px;
      text-align: center;
      padding-top: 17px; 
@@ -36,15 +36,27 @@
   color: greenyellow;
 }
 
+.feed p
+{
+  color: coral;
+  font-weight: 500;
+
+}
+
 .feed h2
 {
   font-weight: 800;
 }
+
 .feed h3
 {
+  vertical-align: middle;
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.feed h3
+
+#text
 {
-  font-weight: 600;
+    text-overflow: ellipsis;
 }
