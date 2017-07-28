@@ -14,12 +14,9 @@
           <ion-avatar>
              <img src="assets/profile.jpg">
           </ion-avatar>
-       
-                <h1 *ngFor="let x of userdetails">{{x.name}}</h1>
-                <h2 *ngFor="let x of userdetails">Phone : {{x.phone}}.</h2>
-                <p *ngFor="let x of userdetails">Last Date of donation : {{x.lastdate}} .</p>
-          
-            
+                <h1 >{{userinfo.name}}</h1>
+                <h2 >Phone : {{userinfo.phone}}.</h2>
+                <p >Last Date of donation : {{userinfo.lastdate}} .</p>
         </ion-item>
 
         <div class="ion-list-inset" no-lines>

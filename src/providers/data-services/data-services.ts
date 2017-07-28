@@ -4,7 +4,14 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DataServicesProvider {
-  name:string="";
+   name:string="";
+   username:string="";
+   phone:string="";
+   lastdate:string="";
+   name1:string="";
+   location:string="";
+   
+  
 
     constructor(private http:Http) {
 
@@ -29,13 +36,13 @@ export class DataServicesProvider {
 
   postLogin(data){
    let link = "https://uiubloodbank.ml/API/login.php";
-   return this.http.post(link,data)
-   .map(res =>res.json());
+   return this.http.post(link,data);
+   //.map(res =>res.json());
   }
   postRegister(data){
     let link = "https://uiubloodbank.ml/API/Register.php";
-      return this.http.post(link,data)
-      .map(res =>res.json());   
+      return this.http.post(link,data);
+     // .map(res =>res.json());   
   }
   
   
@@ -51,8 +58,17 @@ getReview(){
   }
     
  
-
-    
+//validation
+ smsValidation(data){
+      let link = "http://smsgateway.me/api/v3/messages/send";
+      return this.http.post(link,data);
+ }
+  
+  postValidaition(data){
+    let link = "https://uiubloodbank.ml/API/validation.php";
+      return this.http.post(link,data);
+     // .map(res =>res.json());   
+  }   
  
     
 

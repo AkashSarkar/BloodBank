@@ -1,0 +1,20 @@
+
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>validation</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-item >
+		      <ion-label floating>Code</ion-label>
+					<ion-input  [(ngModel)]="vcode" name="Code"  ng-required="true"></ion-input>
+	</ion-item>
+
+				
+				<button ion-button block  (click)="validation()">Log in</button>
+
+
+</ion-content>

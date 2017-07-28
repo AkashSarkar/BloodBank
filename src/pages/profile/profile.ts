@@ -5,6 +5,7 @@ import {ForumPage} from '../forum/forum';
 import {ManageAccountPage} from '../manage-account/manage-account';
 import {FeedPage} from '../feed/feed';
 import { Storage } from '@ionic/storage';
+import { DataServicesProvider } from '../../providers/data-services/data-services';
 @IonicPage()
 @Component({
   selector: 'page-profile',
@@ -13,12 +14,22 @@ import { Storage } from '@ionic/storage';
 })
 export class ProfilePage {
   userdetails:any;
+ /*previous work 
   constructor(public navCtrl: NavController, public navParams: NavParams,public app:App,public storage:Storage) {
   this.storage.get('profile').then((data)=>{
   this.userdetails=data;
   console.log("user");
   console.log(this.userdetails);
-  });
+  });*/  
+userinfo={"username":"","name":"","location":"","phone":"","lastdate":""};
+  constructor(public navCtrl: NavController, public navParams: NavParams,public service:DataServicesProvider,public app:App,public storage:Storage) {
+  this.userinfo.username=this.service.username;
+  this.userinfo.name=this.service.name1;
+  this.userinfo.phone=this.service.phone;
+  this.userinfo.lastdate=this.service.lastdate;
+  this.userinfo.location=this.service.phone;
+  
+
 }
   
   _notification(){

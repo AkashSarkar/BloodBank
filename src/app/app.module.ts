@@ -14,6 +14,7 @@ import {NotificationPage} from '../pages/notification/notification';
 import {ManageAccountPage} from '../pages/manage-account/manage-account';
 import {ForumPage} from '../pages/forum/forum';
 import {FeedPage} from '../pages/feed/feed';
+import {ValidationPage}from '../pages/validation/validation';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -42,7 +43,8 @@ import { AddReviewPage } from '../pages/add-review/add-review';
     RegistrationPage,
     SearchBloodPage,
     IonRatingComponent,
-    AddReviewPage
+    AddReviewPage,
+    ValidationPage
     
 
   ],
@@ -80,7 +82,8 @@ import { AddReviewPage } from '../pages/add-review/add-review';
     LoginPage,
     RegistrationPage,
     SearchBloodPage,
-    AddReviewPage
+    AddReviewPage,
+    ValidationPage
     
   ],
   providers: [
