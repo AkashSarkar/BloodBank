@@ -9,21 +9,30 @@ import { DataServicesProvider } from '../../providers/data-services/data-service
   
 })
 export class HomePage {
- 
   hospital:any;
+  donate:boolean;
+  data:any;
+  don:boolean=true;
   
   constructor(public navCtrl: NavController,private Data:DataServicesProvider) {
+    this.data={};
+    this.data.lastdate="";
      this.Data.hospitals().subscribe(data =>{
       this.hospital=data;
+      this.don=true;
     });
   }
+  clicked(){
+     this.donate=!this.donate;
+     this.don=!this.don;
+   }
 
   sBlood() {
-    this.navCtrl.push(SearchBloodPage);
+    let searchvalue=this.data.search;
+    this.navCtrl.push(SearchBloodPage,{
+      param:searchvalue
+    });
+   this.donate=!this.donate; 
+   this.don=!this.don;
   }
-
-  ionViewDidLoad(){
-   
-
-}
 }

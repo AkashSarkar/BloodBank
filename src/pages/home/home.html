@@ -1,13 +1,43 @@
+<!--splash screen code-->
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+     <img src="assets/logobb.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+<!--splash screen end-->
+
+
+  
 <ion-header>
 
-  <ion-navbar no-shadow color="danger">
-    <ion-title>Blood Bank </ion-title>
+  <ion-navbar no-shadow color="danger" >
+    <ion-title *ngIf="don">Blood Bank </ion-title>
     <ion-buttons end>
-      <button ion-button icon-only  (click)="sBlood()"> 
-        <ion-icon name="search"></ion-icon>
+      <button ion-button icon-only  (click)="clicked()"> 
+        <ion-icon *ngIf="don" name="search"></ion-icon>
+        <button *ngIf="!don" ion-button icon-only  (click)="clicked()"> 
+        <ion-icon name="close" class="cl"></ion-icon>
+        </button>
       </button>
     </ion-buttons>
+        
+ <ion-grid>
+   <!-- <ion-item  *ngIf="donate">-->
+    <ion-row justify-content-start>
+    <ion-col col-9>
+      <ion-searchbar *ngIf="donate" [(ngModel)]= "data.search" name="search" type="text" placeholder="search..." class="ser"></ion-searchbar>
+    </ion-col>
+    <ion-col col-1>
+     <button *ngIf="donate" ion-button round color="light" (click)="sBlood()" class="go">Go</button>
+    </ion-col>
+    </ion-row>
+  <!--</ion-item>-->
+
+</ion-grid>
   </ion-navbar>
+  
 </ion-header>
 
 

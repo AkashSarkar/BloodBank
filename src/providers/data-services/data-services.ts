@@ -25,10 +25,10 @@ export class DataServicesProvider {
       .map(res =>res.json());
     
     }
-    search(){
-      return this.http.get('https://www.uiubloodbank.ml/API/search.php')
-      .map(res =>res.json());
-    }
+  postSearch(data){
+    let link = "https://uiubloodbank.ml/API/search.php";
+    return this.http.post(link,data);
+  }
     hospitals(){
       return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
       .map(res =>res.json());

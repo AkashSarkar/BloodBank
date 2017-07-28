@@ -29911,6 +29911,22 @@ ion-content {
   background-color: #BD0100;
 }
 
+.go {
+  margin: 0;
+  padding: 0;
+  width: 70px;
+  margin-top: 5px;
+  background-color: #EB5D3F;
+}
+
+.cl {
+  size: 10px;
+}
+
+.ser {
+  background-color: #EB5D3F;
+}
+
 .btnSearch, .btnDonate, .card-ios, .home-card {
   background-color: transparent;
 }
