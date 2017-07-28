@@ -25,7 +25,7 @@ export class AddReviewPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private viewCtrl: ViewController,public service:DataServicesProvider) {
     this.data1 = {};
-    this.data1.username = this.service.name;
+    this.data1.username = this.service.name1;
     //this.data1.username = "";
     this.data1.rating = this.rate;
     this.data1.title = "";
