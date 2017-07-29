@@ -12,7 +12,8 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-   splash=true;
+  
+   
    tabBarElement:any;
    loader:any;
    responsedata:any;
@@ -29,6 +30,7 @@ export class LoginPage {
               public storage:Storage) {
   
 }
+    splash=this.service.splashValue;
     ionViewDidLoad(){
     setTimeout(()=>{
       this.splash=false;
@@ -53,12 +55,14 @@ export class LoginPage {
         val:this.result
          });
         }*/
+    this.service.splashValue=false;
     this.presentLoading();
     if($.trim(this.userinfo.username).length>0 && $.trim(this.userinfo.password).length>0){
     this.service.postLogin(this.userinfo).subscribe(data => {
     this.responsedata=data;
     this.data=data.json();
     this.result=this.data[0].token;
+    this.storage.set('profile',this.result);
     this.service.username=this.data[0].token;
     this.service.lastdate=this.data[0].lastdate;
     this.service.phone=this.data[0].phone;
@@ -75,6 +79,7 @@ export class LoginPage {
       this.navCtrl.push(TabsPage,{
         val:this.result
          });
+        
         }
         else{
               $('#error').html("<strong class='text-danger'>Invalid username or Password</strong>");

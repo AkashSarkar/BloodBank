@@ -56,6 +56,7 @@ userinfo={"username":"","name":"","location":"","phone":"","lastdate":""};
    
  logout()
  {
+  this.service.splashValue=true;
   this.cache.clearAll;
   const root=this.app.getRootNav();
   root.popToRoot();

@@ -4,6 +4,7 @@ import { SearchBloodPage } from '../search-blood/search-blood';
 import { DataServicesProvider } from '../../providers/data-services/data-services';
 import { CacheService } from 'ionic-cache';
 import { Observable } from 'rxjs/Observable';
+import {LoginPage}from '../login/login'
 //import { Http } from '@angular/http';
 
 @Component({
@@ -12,7 +13,7 @@ import { Observable } from 'rxjs/Observable';
   
 })
 export class HomePage {
-  //hospital:any;
+  
   donate:boolean;
   data:any;
   don:boolean=true;
@@ -31,13 +32,16 @@ export class HomePage {
     //console.log(req);
     // this.hospital=req;
      this.hospital = this.cache.loadFromObservable(url,req,this.filmsKey,5);
+     //this.navCtrl.pop(LoginPage);
     
   }
-  /*ionViewDidLoad(){
+
+  splash=this.Data.splashValue;
+  ionViewDidLoad(){
     setTimeout(()=>{
       this.splash=false;
     },3500);   //3500ms
-  }*/
+  }
   clicked(){
      this.donate=!this.donate;
      this.don=!this.don;

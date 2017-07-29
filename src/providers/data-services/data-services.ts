@@ -13,7 +13,8 @@ export class DataServicesProvider {
    location:string="";
    link:any="https://www.uiubloodbank.ml/API/hospital.php";
    fromData=new FormData();
-   splashValue:boolean=true;
+   splashValue=true;
+   root=true;
    
    constructor(private http:Http,private toastCtrl: ToastController) {
 
@@ -50,7 +51,7 @@ export class DataServicesProvider {
 
   postLogin(data){
     console.log("Provider");
-    console.log(this.username);
+    console.log(this.splashValue);
    let link = "https://uiubloodbank.ml/API/login.php";
    return this.http.post(link,data);
    //.map(res =>res.json());

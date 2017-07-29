@@ -80,7 +80,7 @@ constructor(public navCtrl: NavController,
 
     //this.responsedata=data;
     this.result=this.data[0].token;
-    this.storage.set('profile',data);
+    this.storage.set('profile',this.result);
     console.log('registerdata');
     console.log(this.dataresponse);
     if(this.result!="Invalid"){
@@ -110,7 +110,7 @@ constructor(public navCtrl: NavController,
     this.viewCtrl.dismiss();
    }
    login()
-   {
+   { this.service.splashValue=false;
      this.navCtrl.push(LoginPage);
    }
 
