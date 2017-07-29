@@ -14,10 +14,10 @@
           <ion-avatar item-start>
             {{ item.bloodgroup }}
           </ion-avatar>
-         <h2>Name: {{ item.name }}</h2>
+         <h2>{{ item.name }}</h2>
              <a href="tel:{{item.phone}}" item-end > <ion-icon  name="call" class="cIcon"></ion-icon></a>
-             <p text-wrap>Location: {{item.location}}</p>
-             <p text-wrap>Lastdate of donation: {{item.lastdate}}</p>
+             <h3 text-wrap>Location: {{item.location}}</h3>
+             <p>Lastdate of donation: {{item.lastdate}}</p>
     </ion-item>
 </ion-list>
 </ion-content>
