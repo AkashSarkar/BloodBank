@@ -2,6 +2,8 @@ import { Component ,ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DataServicesProvider } from '../../providers/data-services/data-services';
 import { Content } from 'ionic-angular';
+import { CacheService } from 'ionic-cache';
+import { Observable } from 'rxjs/Observable';
 
 
 @Component({
@@ -16,6 +18,7 @@ export class ContactPage {
     constructor(public navCtrl: NavController,private Data:DataServicesProvider) {
       this.Data.load().subscribe(data =>{
         this.items=data;
+       // console.log(data);
 
         for (let i = 0; i < 5 && i<this.items.length; i++) 
         {

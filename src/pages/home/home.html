@@ -1,16 +1,4 @@
-<!--splash screen code-->
-<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
-  <div class="flb">
-    <div class="Aligner-item Aligner-item--top"></div>
-     <img src="assets/logobb.png">
-    <div class="Aligner-item Aligner-item--bottom"></div>
-  </div>
-</div>
-<!--splash screen end-->
-
-
-  
-<ion-header>
+  <ion-header>
 
   <ion-navbar no-shadow color="danger" >
     <ion-title *ngIf="don">Blood Bank </ion-title>
@@ -34,16 +22,20 @@
     </ion-col>
     </ion-row>
   <!--</ion-item>-->
-
-</ion-grid>
+   </ion-grid>
   </ion-navbar>
-  
 </ion-header>
 
 
 <ion-content no-lines>
+
+  <ion-refresher (ionRefresh)="forceReload($event)">
+    <ion-refresher-content refreshingText="Reload from API...">
+    </ion-refresher-content>
+  </ion-refresher>
+  
   <ion-list >
-    <ion-item class="home-card" no-lines *ngFor="let item of hospital">
+    <ion-item class="home-card" no-lines *ngFor="let item of hospital| async">
       <ion-card class="I-Card">
         <img src="{{item.images}}"/>
         <ion-card-content >

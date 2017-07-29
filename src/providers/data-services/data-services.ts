@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { ToastController } from 'ionic-angular';
 
 @Injectable()
 export class DataServicesProvider {
@@ -10,13 +11,10 @@ export class DataServicesProvider {
    lastdate:string="";
    name1:string="";
    location:string="";
-   
+   link:any="https://www.uiubloodbank.ml/API/hospital.php";
   
 
-    constructor(private http:Http) {
-
-      
-      
+    constructor(private http:Http,private toastCtrl: ToastController) {
     }
     
     load(){
@@ -30,8 +28,18 @@ export class DataServicesProvider {
     return this.http.post(link,data);
   }
     hospitals(){
-      return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
-      .map(res =>res.json());
+    // return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
+     // .map(res =>res.json());
+    let url='https://www.uiubloodbank.ml/API/hospital.php'
+      return this.http.get(url)
+       .map(res => {
+          let toast = this.toastCtrl.create({
+          message: 'New data from API loaded',
+          duration: 2000
+        });
+        toast.present();
+        return res.json();
+      });
     }
 
   postLogin(data){

@@ -6,6 +6,7 @@ import {ManageAccountPage} from '../manage-account/manage-account';
 import {FeedPage} from '../feed/feed';
 import { Storage } from '@ionic/storage';
 import { DataServicesProvider } from '../../providers/data-services/data-services';
+import { CacheService } from 'ionic-cache';
 @IonicPage()
 @Component({
   selector: 'page-profile',
@@ -22,7 +23,7 @@ export class ProfilePage {
   console.log(this.userdetails);
   });*/  
 userinfo={"username":"","name":"","location":"","phone":"","lastdate":""};
-  constructor(public navCtrl: NavController, public navParams: NavParams,public service:DataServicesProvider,public app:App,public storage:Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public service:DataServicesProvider,public app:App,public storage:Storage,private cache: CacheService) {
   this.userinfo.username=this.service.username;
   this.userinfo.name=this.service.name1;
   this.userinfo.phone=this.service.phone;
@@ -55,7 +56,7 @@ userinfo={"username":"","name":"","location":"","phone":"","lastdate":""};
    
  logout()
  {
-  //this.navCtrl.push(LoginPage);
+  this.cache.clearAll;
   const root=this.app.getRootNav();
   root.popToRoot();
  }

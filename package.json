@@ -32,6 +32,7 @@
     "cordova-plugin-whitelist": "^1.3.1",
     "cordova-sqlite-storage": "^2.0.4",
     "ionic-angular": "3.3.0",
+    "ionic-cache": "^2.0.5",
     "ionic-plugin-keyboard": "^2.2.1",
     "ionic2-super-tabs": "^3.0.1",
     "ionicons": "3.0.0",

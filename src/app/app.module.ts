@@ -27,6 +27,9 @@ import { IonicStorageModule } from '@ionic/storage';
 import { IonRatingComponent } from '../components/ion-rating/ion-rating';
 import { AddReviewPage } from '../pages/add-review/add-review';
 
+
+import { CacheModule } from 'ionic-cache';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -53,6 +56,7 @@ import { AddReviewPage } from '../pages/add-review/add-review';
     HttpModule,
     ReactiveFormsModule,
     IonicStorageModule.forRoot(),
+    CacheModule.forRoot(),
     IonicModule.forRoot(MyApp,
     {
         platforms : {
