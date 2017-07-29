@@ -16,9 +16,15 @@ export class HomePage {
   donate:boolean;
   data:any;
   don:boolean=true;
+<<<<<<< HEAD
   hospital:Observable<any>;
   filmsKey = 'my-films-group';
   constructor(public navCtrl: NavController,private Data:DataServicesProvider,private cache: CacheService) {
+=======
+  splash=true;
+  
+  constructor(public navCtrl: NavController,private Data:DataServicesProvider) {
+>>>>>>> fec2e2f97ab90a11aee71513144f93f0f0b5a81b
     this.data={};
     this.data.lastdate="";
     this.don=true;
@@ -32,6 +38,11 @@ export class HomePage {
     // this.hospital=req;
      this.hospital = this.cache.loadFromObservable(url,req,this.filmsKey,5);
     
+  }
+  ionViewDidLoad(){
+    setTimeout(()=>{
+      this.splash=false;
+    },3500);   //3500ms
   }
   clicked(){
      this.donate=!this.donate;

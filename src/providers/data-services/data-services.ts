@@ -11,16 +11,26 @@ export class DataServicesProvider {
    lastdate:string="";
    name1:string="";
    location:string="";
+<<<<<<< HEAD
    link:any="https://www.uiubloodbank.ml/API/hospital.php";
   
 
     constructor(private http:Http,private toastCtrl: ToastController) {
+=======
+   fromData=new FormData();
+   splashValue:boolean=true;
+   
+    constructor(private http:Http) {
+
+      
+      
+>>>>>>> fec2e2f97ab90a11aee71513144f93f0f0b5a81b
     }
     
     load(){
       
-      return this.http.get('https://www.uiubloodbank.ml/API/api.php')
-      .map(res =>res.json());
+    return this.http.get('https://www.uiubloodbank.ml/API/api.php')
+    .map(res =>res.json());
     
     }
   postSearch(data){
@@ -28,6 +38,7 @@ export class DataServicesProvider {
     return this.http.post(link,data);
   }
     hospitals(){
+<<<<<<< HEAD
     // return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
      // .map(res =>res.json());
     let url='https://www.uiubloodbank.ml/API/hospital.php'
@@ -40,41 +51,50 @@ export class DataServicesProvider {
         toast.present();
         return res.json();
       });
+=======
+    return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
+    .map(res =>res.json());
+>>>>>>> fec2e2f97ab90a11aee71513144f93f0f0b5a81b
     }
 
   postLogin(data){
+    console.log("Provider");
+    console.log(this.username);
    let link = "https://uiubloodbank.ml/API/login.php";
    return this.http.post(link,data);
    //.map(res =>res.json());
   }
   postRegister(data){
+    this.fromData.append('email','diponuiu2010@gmail.com');
+    this.fromData.append('password','11223344');
+    this.fromData.append('device','55220');
     let link = "https://uiubloodbank.ml/API/Register.php";
-      return this.http.post(link,data);
+    return this.http.post(link,data);
      // .map(res =>res.json());   
   }
   
   
 postReview(data){
     let link = "https://uiubloodbank.ml/API/setFeedBack.php";
-      return this.http.post(link,data);    
+    return this.http.post(link,data);    
   }
 
 getReview(){
     
-      return this.http.get('https://www.uiubloodbank.ml/API/getFeedback.php')
-      .map(res =>res.json()) 
+    return this.http.get('https://www.uiubloodbank.ml/API/getFeedback.php')
+    .map(res =>res.json()) 
   }
     
  
 //validation
  smsValidation(data){
-      let link = "http://smsgateway.me/api/v3/messages/send";
-      return this.http.post(link,data);
+    let link = "http://smsgateway.me/api/v3/messages/send";
+    return this.http.post(link,data);
  }
   
   postValidaition(data){
     let link = "https://uiubloodbank.ml/API/validation.php";
-      return this.http.post(link,data);
+    return this.http.post(link,data);
      // .map(res =>res.json());   
   }   
  
