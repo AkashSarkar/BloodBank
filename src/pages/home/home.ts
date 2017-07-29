@@ -13,6 +13,7 @@ export class HomePage {
   donate:boolean;
   data:any;
   don:boolean=true;
+  splash=true;
   
   constructor(public navCtrl: NavController,private Data:DataServicesProvider) {
     this.data={};
@@ -21,6 +22,11 @@ export class HomePage {
       this.hospital=data;
       this.don=true;
     });
+  }
+  ionViewDidLoad(){
+    setTimeout(()=>{
+      this.splash=false;
+    },3500);   //3500ms
   }
   clicked(){
      this.donate=!this.donate;

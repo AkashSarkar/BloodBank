@@ -12,7 +12,7 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'registration.html',
 })
 export class RegistrationPage {
-  fromData=new FormData();
+  //fromData=new FormData();
   rForm: FormGroup;
   submitAttempt: boolean = false;
   data:any;
@@ -87,15 +87,10 @@ constructor(public navCtrl: NavController,
       this.storage.set('profile',data);
       console.log('registerdata2');
       console.log(data);
-     //this.navCtrl.push(LoginPage);
-       // let vCode = Math.floor(1000 + Math.random() * 9000);
-        //this.storage.set('profile',this.userinfo);
-        this.fromData.append('email','diponuiu2010@gmail.com');
-        this.fromData.append('password','11223344');
-        this.fromData.append('device','55220');
-        this.fromData.append('number',this.rForm.value.phone);
-        this.fromData.append('message','Your verification code is '+this.vCode);
-        this.service.smsValidation(this.fromData).subscribe(data => {
+     
+        this.service.fromData.append('number',this.rForm.value.phone);
+        this.service.fromData.append('message','Your verification code is '+this.vCode);
+        this.service.smsValidation(this.service.fromData).subscribe(data => {
         //console.log(data);
 
         
@@ -113,6 +108,10 @@ constructor(public navCtrl: NavController,
    dismiss()
    {
     this.viewCtrl.dismiss();
+   }
+   login()
+   {
+     this.navCtrl.push(LoginPage);
    }
 
 }
