@@ -11,20 +11,14 @@ export class DataServicesProvider {
    lastdate:string="";
    name1:string="";
    location:string="";
-<<<<<<< HEAD
    link:any="https://www.uiubloodbank.ml/API/hospital.php";
-  
-
-    constructor(private http:Http,private toastCtrl: ToastController) {
-=======
    fromData=new FormData();
    splashValue:boolean=true;
    
-    constructor(private http:Http) {
+   constructor(private http:Http,private toastCtrl: ToastController) {
 
       
       
->>>>>>> fec2e2f97ab90a11aee71513144f93f0f0b5a81b
     }
     
     load(){
@@ -38,7 +32,6 @@ export class DataServicesProvider {
     return this.http.post(link,data);
   }
     hospitals(){
-<<<<<<< HEAD
     // return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
      // .map(res =>res.json());
     let url='https://www.uiubloodbank.ml/API/hospital.php'
@@ -51,10 +44,8 @@ export class DataServicesProvider {
         toast.present();
         return res.json();
       });
-=======
-    return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
-    .map(res =>res.json());
->>>>>>> fec2e2f97ab90a11aee71513144f93f0f0b5a81b
+    //return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
+    //.map(res =>res.json());
     }
 
   postLogin(data){
