@@ -30000,9 +30000,10 @@ page-login .sc {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 32%;
-  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 80px;
   position: fixed;
+  text-align: center;
 }
 
 page-login ion-card.card {
