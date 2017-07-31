@@ -30002,7 +30002,7 @@ page-login .sc {
   justify-content: center;
   margin-top: 70px;
   margin-bottom: 80px;
-  position: fixed;
+  position: relative;
   text-align: center;
 }
 
