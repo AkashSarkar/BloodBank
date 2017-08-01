@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as $ from 'jquery';
 import {ValidationPage} from '../validation/validation';
 import { Storage } from '@ionic/storage';
+import { LoadingController } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-registration',
@@ -13,6 +14,7 @@ import { Storage } from '@ionic/storage';
 })
 export class RegistrationPage {
   //fromData=new FormData();
+  loader:any;
   rForm: FormGroup;
   submitAttempt: boolean = false;
   data:any;
@@ -30,6 +32,7 @@ constructor(public navCtrl: NavController,
      private viewCtrl: ViewController,
      public service:DataServicesProvider,
      public formBuilder: FormBuilder,
+     public loadingCtrl:LoadingController,
      public storage:Storage){
      this.result="";
      this.vCode = Math.floor(1000 + Math.random() * 9000);
@@ -66,7 +69,7 @@ constructor(public navCtrl: NavController,
                
     });*/
     
-
+    this.presentLoading();
     this.service.postRegister(this.rForm.value).subscribe(data=>{
     this.dataresponse=data;
     this.data=data.json();
@@ -92,9 +95,9 @@ constructor(public navCtrl: NavController,
         this.service.fromData.append('message','Your verification code is '+this.vCode);
         this.service.smsValidation(this.service.fromData).subscribe(data => {
         //console.log(data);
-
-        
+       
         });
+       this.loader.dismiss();
         this.navCtrl.push(ValidationPage);
         
     }
@@ -103,6 +106,13 @@ constructor(public navCtrl: NavController,
     }
                
     });
+   
+  }
+   presentLoading() {
+    this.loader = this.loadingCtrl.create({
+      content: "Authenticating ...."
+    });
+    this.loader.present();
   }
   
    dismiss()
