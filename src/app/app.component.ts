@@ -1,5 +1,5 @@
 import { Component,ViewChild} from '@angular/core';
-import { Platform, Config, ToastController, Nav, NavController } from 'ionic-angular';
+import { Platform, Config, Nav, NavController} from 'ionic-angular';
 import {Injectable} from "@angular/core";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -9,7 +9,7 @@ import { CacheService } from "ionic-cache";
 import { Storage } from '@ionic/storage';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DataServicesProvider } from '../providers/data-services/data-services';
-
+import { App } from 'ionic-angular';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class MyApp {
    @ViewChild('nav') nav;
    //r:any;
   constructor(platform: Platform,  cache: CacheService,statusBar: StatusBar, 
-  splashScreen: SplashScreen,public storage: Storage,public service:DataServicesProvider ,public toastCtrl: ToastController) {
+  splashScreen: SplashScreen,public storage: Storage,public service:DataServicesProvider,public app: App) {
     this.setRootPage();
     platform.ready().then(() => {
       cache.setDefaultTTL(60 * 60 * 12);
@@ -59,22 +59,17 @@ export class MyApp {
                 this.nav.pop({});
             }
         });*/
-          platform.registerBackButtonAction(()=>{
-          let toast = this.toastCtrl.create({
-           message: "logout to exit?",
-           duration: 3000
-          });
-          toast.present(); 
+        
          // navigator.app.exitApp() 
-        });
     });
   }
   setRootPage() {
    console.log('setting root page...')
-  if (!this.service.root) {
-    this.rootPage = LoginPage;
+   if(!this.service.root) {
+    console.log("login");
+    this.rootPage=LoginPage;
   } else {
-    this.rootPage = HomePage;
+   this.rootPage=HomePage;
   }
   }
   }
