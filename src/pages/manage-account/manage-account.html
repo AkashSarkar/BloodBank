@@ -21,12 +21,28 @@
 
     <ion-item>
       <ion-label floating color="appbase">Phone No</ion-label>
-      <ion-input type="text" ></ion-input>
+      <ion-input [(ngModel)]="userinfo.bloodgroup" type="text" value="{{bloodgroup}}"></ion-input>
+    </ion-item>
+
+        <ion-item>
+      <ion-label floating color="appbase">Password</ion-label>
+      <ion-input [(ngModel)]="userinfo.pass" type="text" value="{{pass}}"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating color="appbase">City</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input [(ngModel)]="userinfo.location" type="text" value="{{location}}"></ion-input>
+    </ion-item>
+
+     <ion-item>
+      <ion-label floating color="appbase">Gender</ion-label>
+      <ion-input [(ngModel)]="userinfo.gender" type="text" value="{{gender}}"></ion-input>
+      
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color="appbase">Last Donated</ion-label>
+      <ion-input [(ngModel)]="userinfo.lastdate" type="text" value="{{lastdate}}"></ion-input>
     </ion-item>
 
     <br>

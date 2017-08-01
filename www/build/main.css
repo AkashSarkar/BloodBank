@@ -29891,6 +29891,20 @@ ion-rating {
   color: #B40404;
 }
 
+.hd ion-avatar {
+  color: white;
+  background-color: transparent;
+  -webkit-padding-after: 30px;
+  padding-block-end: 30px;
+  margin-bottom: 2px;
+}
+
+.hd h1 {
+  height: 60px;
+  width: 40px;
+  font: bold;
+}
+
 page-home .btnSearch {
   text-align: center !important;
   margin-top: 40%;
