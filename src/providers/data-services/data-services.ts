@@ -33,7 +33,7 @@ export class DataServicesProvider {
     return this.http.post(link,data);
   }
   ___postSearch(data){
-    let link = "https://uiubloodbank.ml/API/profile.php";
+    let link ="https://uiubloodbank.ml/API/profile.php";
     return this.http.post(link,data);
 
   }
