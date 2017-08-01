@@ -60,9 +60,10 @@ export class DataServicesProvider {
 
   postLogin(data){
     console.log("Provider");
-    console.log(this.splashValue);
-   let link = "https://uiubloodbank.ml/API/login.php";
-   return this.http.post(link,data);
+    //console.log(this.splashValue);
+   console.log(data);
+    let link = "https://uiubloodbank.ml/API/login1.php";
+      return this.http.post(link,data);
    //.map(res =>res.json());
   }
   postRegister(data){
