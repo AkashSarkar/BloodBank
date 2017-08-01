@@ -79,7 +79,7 @@ export class LoginPage {
       this.navCtrl.push(TabsPage,{
         val:this.result
          });
-        
+         this.service.root=true; 
         }
         else{
               $('#error').html("<strong class='text-danger'>Invalid username or Password</strong>");

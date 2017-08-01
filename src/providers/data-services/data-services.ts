@@ -14,23 +14,32 @@ export class DataServicesProvider {
    link:any="https://www.uiubloodbank.ml/API/hospital.php";
    fromData=new FormData();
    splashValue=true;
-   root=true;
-   
+   root:boolean=false;
    constructor(private http:Http,private toastCtrl: ToastController) {
-
-      
-      
-    }
+     
+   }
     
     load(){
       
     return this.http.get('https://www.uiubloodbank.ml/API/api.php')
     .map(res =>res.json());
-    
     }
+  _postSearch(data){
+      let link = "https://uiubloodbank.ml/API/getProfileData.php";
+      return this.http.post(link,data);
+  }
   postSearch(data){
     let link = "https://uiubloodbank.ml/API/search.php";
     return this.http.post(link,data);
+  }
+  ___postSearch(data){
+    let link = "https://uiubloodbank.ml/API/profile.php";
+    return this.http.post(link,data);
+
+  }
+  __postSearch(data){
+    let link = "https://uiubloodbank.ml/API/postProfileData.php";
+      return this.http.post(link,data);
   }
     hospitals(){
     // return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')

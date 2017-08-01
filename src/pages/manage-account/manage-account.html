@@ -9,5 +9,30 @@
 
 
 <ion-content padding>
+   <ion-list >
+    <ion-item>
+      <ion-label floating color="appbase">Name</ion-label>
+      <ion-input  [(ngModel)]="userinfo.realname" type="text" value="{{realname}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating color="appbase">Email</ion-label>
+      <ion-input [(ngModel)]="userinfo.email" type="email" value="{{email}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color="appbase">Phone No</ion-label>
+      <ion-input type="text" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color="appbase">City</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <br>
+    <button ion-button block color="appbase" 
+    (click)="Update()">Update</button>
+
+  </ion-list>
 
 </ion-content>

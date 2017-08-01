@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component,ViewChild} from '@angular/core';
+import { Platform, Config, ToastController, Nav, NavController } from 'ionic-angular';
+import {Injectable} from "@angular/core";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
-import {HomePage} from '../pages/home/home';
+import { HomePage } from '../pages/home/home';
 import { CacheService } from "ionic-cache";
 import { Storage } from '@ionic/storage';
 import { TabsPage } from '../pages/tabs/tabs';
+import { DataServicesProvider } from '../providers/data-services/data-services';
 
 
 
@@ -15,9 +17,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 })
 export class MyApp {
   public rootPage:any;
+   @ViewChild('nav') nav;
    //r:any;
   constructor(platform: Platform,  cache: CacheService,statusBar: StatusBar, 
-  splashScreen: SplashScreen,public storage: Storage ) {
+  splashScreen: SplashScreen,public storage: Storage,public service:DataServicesProvider ,public toastCtrl: ToastController) {
+    this.setRootPage();
     platform.ready().then(() => {
       cache.setDefaultTTL(60 * 60 * 12);
        //this.r=service.root;
@@ -27,20 +31,51 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      this.setRootPage();
-    }
-    );
-  }
 
+
+       //Registration of push in Android and Windows Phone
+     /*   var lastTimeBackPress = 0;
+        var timePeriodToExit  = 2000;
+
+        platform.registerBackButtonAction(() => {
+            // get current active page
+            let view = this.nav.getActive();
+            if (view.component.name == "HomePage") {
+                //Double check to exit app
+                console.log(view.component.name);
+                if (new Date().getTime() - lastTimeBackPress < timePeriodToExit) {
+                    platform.exitApp; //Exit from app
+                } else {
+                    let toast = this.toastCtrl.create({
+                        message:  'Press back again to exit App?',
+                        duration: 3000,
+                        position: 'bottom'
+                    });
+                    toast.present();
+                    lastTimeBackPress = new Date().getTime();
+                }
+            } else {
+                // go to previous page
+                this.nav.pop({});
+            }
+        });*/
+          platform.registerBackButtonAction(()=>{
+          let toast = this.toastCtrl.create({
+           message: "logout to exit?",
+           duration: 3000
+          });
+          toast.present(); 
+         // navigator.app.exitApp() 
+        });
+    });
+  }
   setRootPage() {
    console.log('setting root page...')
-   this.storage.get('profile').then((data) => {
-  if (data) {
+  if (!this.service.root) {
     this.rootPage = LoginPage;
   } else {
-    this.rootPage = TabsPage;
+    this.rootPage = HomePage;
   }
-});
   }
   }
 
