@@ -47,11 +47,6 @@ export class DataServicesProvider {
     let url='https://www.uiubloodbank.ml/API/hospital.php'
       return this.http.get(url)
        .map(res => {
-          let toast = this.toastCtrl.create({
-          message: 'New data from API loaded',
-          duration: 2000
-        });
-        toast.present();
         return res.json();
       });
     //return this.http.get('https://www.uiubloodbank.ml/API/hospital.php')
