@@ -3,11 +3,11 @@
 		<ion-card-header>
 			<p *ngIf="submitAttempt">Registration From</p>
 		</ion-card-header>
-		<ion-card-content>
+		<ion-card-content class="registrationFrom" >
 			<ion-list no-line>
-				<form [formGroup]="rForm">
-					<ion-item>
-           				 <ion-label floating>Username</ion-label>
+				<form [formGroup]="rForm" class="Form" color="light">
+					<ion-item class="xy">
+           				 <ion-label floating color="light">Username</ion-label>
            				 <ion-input formControlName="username" type="text"></ion-input>
 					</ion-item>
 					
@@ -16,7 +16,7 @@
          			</div>
 					
 					<ion-item>
-						<ion-label floating>Realname</ion-label>
+						<ion-label floating color="light">Realname</ion-label>
 						<ion-input  formControlName="realname" type="text"></ion-input>
 					</ion-item>
 					<div *ngIf="!rForm.controls.realname.valid  && (rForm.controls.realname.touched || submitAttempt)">
@@ -24,15 +24,15 @@
          			</div>
 
 					<ion-item>
-						<ion-label floating>Date of Birth</ion-label>
-						<ion-input formControlName="age" type="date"></ion-input>
+						<ion-label floating color="light">Date of Birth</ion-label>
+						<ion-input  formControlName="age" type="date"></ion-input>
 					</ion-item>
 					<div *ngIf="!rForm.controls.age.valid  && (rForm.controls.age.touched || submitAttempt)">
                 		<p>This field can't be empty.</p>
          			</div>
 
 					<ion-item>
-                  		<ion-label floating>Gender</ion-label>
+                  		<ion-label floating color="light">Gender</ion-label>
                     	<ion-select formControlName="gender" >
 							<ion-option value="male" >Male</ion-option>
 							<ion-option value="female" >Female</ion-option>
@@ -43,7 +43,7 @@
          			</div>
 
 					<ion-item>
-                 		<ion-label floating>Enter BloodGroup</ion-label>
+                 		<ion-label floating color="light">Enter BloodGroup</ion-label>
                     	<ion-select formControlName="bloodgroup" >
 							<ion-option value="A+">A+</ion-option>
 							<ion-option value="A-">A-</ion-option>
@@ -59,7 +59,7 @@
          			</div>
 
 					<ion-item>
-                 	 	<ion-label floating>Enter Location</ion-label>
+                 	 	<ion-label floating color="light">Enter Location</ion-label>
                      	<ion-select formControlName="location" type="text" required>
 					      <ion-option value="Dhaka" >Dhaka</ion-option>
 					      <ion-option value="Chittagong" >Chittagong</ion-option>
@@ -76,7 +76,7 @@
          			</div>
 
 					<ion-item>
-						<ion-label floating>Enter Phone</ion-label>
+						<ion-label floating color="light">Enter Phone</ion-label>
 						<ion-input numbers-only formControlName="phone" type="text"></ion-input>
 					</ion-item>
 					<div *ngIf="!rForm.controls.phone.valid  && (rForm.controls.phone.touched || submitAttempt)">
@@ -84,7 +84,7 @@
          			</div>
 
 					<ion-item>
-						<ion-label floating>Enter Email</ion-label>
+						<ion-label floating color="light">Enter Email</ion-label>
 						<ion-input  formControlName="email" type="email"></ion-input>
 					</ion-item>
 					<div *ngIf="!rForm.controls.email.valid  && (rForm.controls.email.touched || submitAttempt)">
@@ -92,7 +92,7 @@
          			</div>
 
 					<ion-item>
-						<ion-label floating>Password</ion-label>
+						<ion-label floating color="light">Password</ion-label>
 						<ion-input  formControlName="password" type="password" ></ion-input>
 					</ion-item>
 					<div *ngIf="!rForm.controls.password.valid  && (rForm.controls.password.touched || submitAttempt)">
@@ -100,12 +100,12 @@
          			</div>
 
 					<ion-item>
-						<ion-label>Want To Donate Blood?</ion-label>
+						<ion-label color="light">Want To Donate Blood?</ion-label>
 						<ion-checkbox item-end (click)="clicked()"></ion-checkbox>	
 					</ion-item>
 
 					<ion-item  *ngIf="donate" >
-						<ion-label>LastDateOfDonation</ion-label>
+						<ion-label color="light">LastDateOfDonation</ion-label>
 						<ion-input  formControlName="lastdate" type="date"></ion-input>
 					</ion-item>
 					

@@ -20,7 +20,7 @@ page-registration {
 
 	ion-card.card {
 		box-shadow: none;
-		background: rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.6);
 		border-radius: 10px;
 	}
 
@@ -35,11 +35,14 @@ page-registration {
 
 	.item {
 		margin-bottom: 10px;
-		background: rgba(255, 255, 255, 0.5);
+		background: rgba(110, 110, 110, 0.5);
 		border: medium none;
+		color: white;
 
 		.text-input, {
 			color: #fff;
+			font-size: 16px;
+			font-weight: 600;
 		}
 
 		input::-moz-placeholder  {
@@ -80,5 +83,22 @@ page-registration {
 	{
 		color: coral;
 	}
+
+	.Form ion-label 
+	{
+	  color:rgb(255, 255, 255);
+	  font-weight: bold;
+	  font-size: 16px;
+	
+	}
+	.Form ion-label :active
+	{
+	  color:coral;
+	  font-weight:bold;
+	  //font-size: 18px;
+	
+	}
+	
+	
 
 }
