@@ -29766,58 +29766,88 @@ ion-rating {
   color: white;
 }
 
-.feed {
+page-about .feed {
   color: white;
   background-color: transparent;
   -webkit-padding-after: 30px;
   padding-block-end: 30px;
-  margin-bottom: 2px;
+  text-align: justify;
 }
 
-.feed ion-avatar {
-  background-image: url("../assets/ff.jpg");
+page-about .feed ion-card {
+  background-color: transparent;
+}
+
+page-about .comment {
+  background-color: rgba(169, 0, 0, 0.5);
+  color: white;
+}
+
+page-about .feed ion-avatar img {
   background-size: cover;
-  height: 60px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   text-align: center;
-  padding-top: 17px;
   font-size: 18px;
   color: white;
 }
 
-.del {
+page-about .del {
   color: white;
 }
 
-.del:hover {
+page-about .del:hover {
   color: greenyellow;
 }
 
-.feed p {
+page-about .feed p {
   color: coral;
   font-weight: 600;
   font-size: 15px;
 }
 
-.feed h2 {
+page-about .feed h2 {
   font-weight: 1000;
-  font-size: 20px;
-}
-
-.feed h3 {
+  font-size: 16px;
+  color: coral;
   font-weight: 500;
-  color: yellowgreen;
-  font-size: 13px;
 }
 
-.feed h4 {
+page-about .feed h3 {
+  font-weight: 500;
+  color: #B40404;
+  font-size: 18px;
+}
+
+page-about .feed h4 {
   vertical-align: middle;
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-#text {
+page-about .st h3 {
+  color: coral;
+}
+
+page-about .st h5 {
+  font-weight: 450;
+}
+
+page-about .comment2 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+page-about .comment2 h2 {
+  color: #FF6F00;
+}
+
+page-about .comment2 h4 {
+  color: #E65100;
+  font-size: 15px;
+}
+
+page-about #text {
   text-overflow: ellipsis;
 }
 
@@ -30375,14 +30405,18 @@ page-login .custom-login-label i {
 }
 
 .listColor ion-item {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(169, 0, 0, 0.5);
   color: white;
   font-weight: bold;
   font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 6px;
+  margin-top: 6px;
 }
 
 .listColor ion-item:hover {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0.3);
   color: yellow;
   font-size: 22px;
 }

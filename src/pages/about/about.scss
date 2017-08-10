@@ -1,5 +1,5 @@
 
-
+page-about {
 .feed 
 {
     //background-image: linear-gradient(rgba(160, 3, 3, 0.4),rgba(160, 3, 3, 0.3)),url('../assets/li.jpg');
@@ -10,18 +10,30 @@
     //background-color:#ff6f00;
     background-color: rgba(0,0,0,0);
     padding-block-end: 30px;
-    margin-bottom: 2px;
+   // margin-bottom: 2px;
+    text-align: justify;
     
 }
+  .feed ion-card
+  {
 
-.feed ion-avatar
+    background-color: rgba(0,0,0,0);
+
+  }
+  .comment
+  {
+    background-color:rgba(169, 0, 0,0.5);
+    color: white;
+  }
+
+.feed ion-avatar img
 {
-     background-image: url('../assets/ff.jpg');
+     //background-image: url('../assets/ff.jpg');
      background-size:cover;
-     height: 60px;
-     width: 40px;
+     height: 35px;
+     width: 35px;
      text-align: center;
-     padding-top: 17px; 
+    // padding: 10px; 
      font-size:18px;
      color: white;
 }
@@ -47,17 +59,23 @@
 .feed h2
 {
   font-weight: 1000;
-  font-size: 20px;
+  font-size: 16px;
+  color: coral;
+  font-weight: 500;
   
 }
 
 .feed h3
 {
   font-weight: 500;
-  color:yellowgreen;
-  font-size: 13px;
+  color:#B40404;
+  font-size: 18px;
 }
-
+.feed ion-avatar
+{
+  //height: 0px;
+  //width:70px;
+}
 .feed h4
 {
   vertical-align: middle;
@@ -65,8 +83,31 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.st h3
+{
+  color: coral;
+}
+.st h5
+{
+  font-weight: 450;
+}
+.comment2
+{
+  //background-color: rgba(187,174,174,0.8);
+  background-color: rgba(255,255,255,0.9);
+}
+.comment2 h2
+{
+  color:#FF6F00 ;
+}
 
+.comment2 h4
+{
+  color: #E65100;
+  font-size: 15px;
+}
 #text
 {
     text-overflow: ellipsis;
+}
 }

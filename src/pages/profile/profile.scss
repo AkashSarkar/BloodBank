@@ -44,16 +44,21 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 
 .listColor ion-item
 {
-    background-color:rgba(255, 255, 255, 0);
+    background-color:rgba(169, 0, 0,0.5);
     color: white;
     font-weight: bold;
     font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    margin-top: 6px;
 }
 .listColor ion-item:hover
 {
-    background-color:rgba(255, 255, 255, 0);
+    background-color:rgba(0, 0, 0,0.3);
     color: yellow;
     font-size: 22px;
 }
+
 
 //deepita end.

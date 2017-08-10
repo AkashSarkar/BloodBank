@@ -38,7 +38,7 @@ constructor(public navCtrl: NavController,
      this.vCode = Math.floor(1000 + Math.random() * 9000);
      
      this.rForm = formBuilder.group({
-        username: ['',Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]+[0-9]*'), Validators.required])],
+        username: ['',Validators.compose([Validators.maxLength(30), Validators.pattern('[a-z]+[0-9]*'), Validators.required])],
         realname: ['',Validators.compose([Validators.maxLength(50), Validators.pattern('[a-zA-Z ]+'), Validators.required])],
         age: ['',Validators.required],
         gender:['',Validators.required],
