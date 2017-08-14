@@ -22,7 +22,7 @@ page-about {
   }
   .comment
   {
-    background-color:rgba(169, 0, 0,0.5);
+    background-color:rgba(169, 0, 0,0.55);
     color: white;
   }
 
@@ -30,8 +30,8 @@ page-about {
 {
      //background-image: url('../assets/ff.jpg');
      background-size:cover;
-     height: 35px;
-     width: 35px;
+     height: 40px;
+     width: 40px;
      text-align: center;
     // padding: 10px; 
      font-size:18px;
@@ -58,10 +58,11 @@ page-about {
 
 .feed h2
 {
-  font-weight: 1000;
-  font-size: 16px;
+  
+  font-size: 18px;
   color: coral;
-  font-weight: 500;
+  font-weight: 900;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   
 }
 
@@ -81,8 +82,16 @@ page-about {
 }
 .st h3
 {
-  color: coral;
+  color:coral;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: fantasy;
 }
+.st ion-icon
+{
+  color:orange  ;
+}
+
 .st h5
 {
   font-weight: 450;
@@ -106,4 +115,5 @@ page-about {
 {
     text-overflow: ellipsis;
 }
+
 }

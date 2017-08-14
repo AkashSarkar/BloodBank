@@ -40,7 +40,7 @@
   <ion-grid no-lines>
     <ion-row><ion-col><h2>{{ item.username }}</h2></ion-col></ion-row>
    <ion-row class="st">
-    <h3>
+    <h3> <ion-col *ngIf=" item.rating  >= 1">Ratting :</ion-col>
     <ion-col *ngIf=" item.rating  == 1">
       <ion-icon name="star"></ion-icon>
      </ion-col>
